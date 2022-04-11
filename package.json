@@ -9,7 +9,7 @@
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
     "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet --fix",
     "prepare": "husky install",
-    "test": "vitest related --passWithNoTests --silent",
+    "test": "vitest related --passWithNoTests",
     "test:watch": "vitest --passWithNoTests --watch",
     "test:ui": "vitest --ui --passWithNoTests",
     "coverage": "vitest run --coverage",
