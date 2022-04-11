@@ -3,6 +3,10 @@ const colors = {
   primaryLight: '#279d9a',
   white: {
     normal: '#fff',
+    light: '#ccc',
+  },
+  black: {
+    normal: '#000',
   },
 };
 
