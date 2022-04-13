@@ -14,7 +14,7 @@ export const parameters = {
 
 addDecorator(story => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>);
 
-addDecorator((story) => (
+addDecorator(story => (
   <>
     <GlobalStyle />
     {story()}
