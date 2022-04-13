@@ -28,6 +28,10 @@
     "prettier"
   ],
   "rules": {
+    "@typescript-eslint/no-empty-function": [
+      "error",
+      { "allow": ["arrowFunctions"] }
+    ],
     "react/no-unescaped-entities": "off",
     "react/require-default-props": "off",
     "import/prefer-default-export": "off",
@@ -74,6 +78,7 @@
     {
       "files": ["*.stories.*"],
       "rules": {
+        "no-console": "off",
         "react/function-component-definition": "off"
       }
     }
