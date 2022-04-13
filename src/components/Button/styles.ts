@@ -28,15 +28,19 @@ export const ButtonContainer = styled.button<IButtonProps>`
   display: inline-block;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 
+  :hover {
+    transition: 0.2s ease all;
+    background-color: ${colors.primaryLight};
+  }
+
   ${({ primary }) =>
     !primary &&
     css`
       color: ${colors.black.normal};
       background-color: ${colors.white.normal};
-    `}
 
-  :hover {
-    transition: 0.2s ease all;
-    background-color: ${colors.primaryLight};
-  }
+      :hover {
+        background-color: ${colors.white.lighter};
+      }
+    `}
 `;

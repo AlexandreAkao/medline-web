@@ -11,6 +11,7 @@
     "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
     "plugin:storybook/recommended",
+    "plugin:react-hooks/recommended",
     "prettier",
     "plugin:prettier/recommended"
   ],
@@ -25,9 +26,18 @@
   "plugins": [
     "react",
     "@typescript-eslint",
-    "prettier"
+    "prettier",
+    "react-hooks"
   ],
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "enableDangerousAutofixThisMayCauseInfiniteLoops": true
+      }
+    ],
+    // "prefer-destructuring": ["error", { "object": true, "array": false }],
     "@typescript-eslint/no-empty-function": [
       "error",
       { "allow": ["arrowFunctions"] }

@@ -24,13 +24,11 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  #root {
-    button {
-      cursor: pointer;
-    }
+  button {
+    cursor: pointer;
+  }
 
-    a {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
   }
 `;
