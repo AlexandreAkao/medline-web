@@ -8,6 +8,10 @@ const colors = {
   },
   black: {
     normal: '#000',
+    soft: '#1d2129',
+  },
+  grey: {
+    normal: '#808080',
   },
 };
 

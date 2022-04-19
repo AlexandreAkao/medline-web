@@ -3,6 +3,7 @@ import Select, { ActionMeta } from 'react-select';
 
 import { customStyleIcon, customStyleSelect, DropdownContainer } from 'components/Dropdown/styles';
 import Button from 'components/Button';
+import colors from 'styles/colors';
 
 function Dropdown({
   options,
@@ -27,7 +28,7 @@ function Dropdown({
 
   return (
     <DropdownContainer>
-      {Icon && <Icon role="img" color="#808080" size={24} style={customStyleIcon} />}
+      {Icon && <Icon role="img" color={colors.grey.normal} size={24} style={customStyleIcon} />}
       <Select
         aria-labelledby="Selecionar"
         name="ubs"
