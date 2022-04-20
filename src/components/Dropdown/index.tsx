@@ -30,7 +30,6 @@ function Dropdown({
     <DropdownContainer>
       {Icon && <Icon role="img" color={colors.grey.normal} size={24} style={customStyleIcon} />}
       <Select
-        aria-labelledby="Selecionar"
         name="ubs"
         options={options}
         placeholder={placeholder}

@@ -39,7 +39,6 @@ exports[`Dropdown > should match with snapshot 1`] = `
               aria-describedby="react-select-2-placeholder"
               aria-expanded="false"
               aria-haspopup="true"
-              aria-labelledby="Selecionar"
               autocapitalize="none"
               autocomplete="off"
               autocorrect="off"
