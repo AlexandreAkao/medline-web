@@ -1,0 +1,35 @@
+// Vitest Snapshot v1
+
+exports[`Switch > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ kCIQoJ"
+  >
+    <input
+      class="sc-eCYdqJ iXaHfl"
+      data-testid="test-switch"
+      id="react-switch-new"
+      name="react-switch-new"
+      type="checkbox"
+    />
+    <label
+      class="sc-hKMtZM bBCKhs"
+      for="react-switch-new"
+    >
+      <div
+        class="sc-gsnTZi gkDFwC"
+      >
+        <span>
+          left
+        </span>
+        <span>
+          right
+        </span>
+      </div>
+      <span
+        class="sc-dkzDqf jHkIlX"
+      />
+    </label>
+  </div>
+</div>
+`;
