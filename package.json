@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc -p ./tsconfig.production.json && vite build",
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
     "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet --fix",
     "prepare": "husky install",
+    "ci": "npm ci --omit=dev --ignore-scripts --only=production",
     "test": "vitest related --passWithNoTests --globals",
     "test:watch": "vitest dev --passWithNoTests --watch --globals",
     "test:ui": "vitest --ui --passWithNoTests --globals",

@@ -1,0 +1,18 @@
+FROM node:16
+
+# ENV NODE_ENV=production
+WORKDIR /usr/src/app
+
+COPY ["package.json", "package-lock.json", "./"]
+
+# RUN npm install --omit=optional
+RUN npm install
+RUN npm install serve -g
+
+COPY . .
+
+RUN npm run build
+
+EXPOSE 6006
+
+CMD ["serve", "-l", "6006", "storybook-static"]
