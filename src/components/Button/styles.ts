@@ -2,20 +2,16 @@ import styled, { css } from 'styled-components';
 
 import colors from 'styles/colors';
 
-const getButtonSize = (size?: ButtonSize) => {
-  switch (size) {
-    case 'small':
-      return '5px 20px';
-    case 'medium':
-      return '10px 40px';
-    case 'large':
-      return '10px 60px';
-    default:
-      return '0';
-  }
+const getButtonSize = (size: ButtonSize) => {
+  const sizeMap = {
+    small: '5px 20px',
+    medium: '10px 40px',
+    large: '10px 60px',
+  };
+  return sizeMap[size];
 };
 
-export const ButtonContainer = styled.button<IButtonProps>`
+export const ButtonContainer = styled.button<Required<IButtonProps>>`
   border: 0;
   background-color: ${colors.primary};
   padding: ${({ size }) => getButtonSize(size)};

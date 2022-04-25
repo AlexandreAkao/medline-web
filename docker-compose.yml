@@ -1,0 +1,22 @@
+version: '3'
+services:
+  medline-web:
+    container_name: medline-web
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+  storybook:
+    container_name: storybook
+    build:
+      context: .
+      dockerfile: Dockerfile.storybook
+    ports:
+      - "6006:6006"
+    expose:
+      - 6006
+
+
