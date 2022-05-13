@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import colors from 'styles/colors';
 import doctor from 'assets/images/doctor.svg';
+import ScreenSizes from 'styles/screenSizes';
 
 export const LandingPageContainer = styled.div`
   background-color: ${colors.primary};
@@ -9,7 +10,8 @@ export const LandingPageContainer = styled.div`
   background-image: url(${doctor});
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 50% 0;
+  background-position-x: 50%;
+  overflow: auto;
 `;
 
 export const LandingPageMain = styled.main`
@@ -22,6 +24,13 @@ export const LandingPageMain = styled.main`
     '. dropdown dropdown . .'
     '. . . text1 .'
     '. text2 . . .';
+
+  @media (max-width: ${ScreenSizes.large}) {
+    grid-template-areas:
+      '. dropdown dropdown dropdown .'
+      '. text1 text1 text1 .'
+      '. text2 text2 text2 .';
+  }
 `;
 
 export const DropdownContainer = styled.div`
@@ -47,6 +56,10 @@ export const Text1Container = styled.div`
   span {
     font-size: 1.5rem;
     font-weight: 500;
+  }
+
+  @media (max-width: ${ScreenSizes.large}) {
+    margin-bottom: 50px;
   }
 `;
 

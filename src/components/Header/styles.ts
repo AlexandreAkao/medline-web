@@ -18,6 +18,7 @@ export const Nav = styled.header<Pick<IHeaderProps, 'isAuthenticated'>>`
 `;
 
 export const LogoImg = styled.img`
+  cursor: pointer;
   height: 65%;
 `;
 

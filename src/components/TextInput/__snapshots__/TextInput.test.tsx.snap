@@ -10,10 +10,10 @@ exports[`TextInput > should match with snapshot 1`] = `
     >
       <input
         class="sc-hKMtZM hjyomr"
-        color="#fafa"
         data-testid="test-input"
         placeholder="any_placeholder"
         type="text"
+        value=""
       />
     </div>
   </div>

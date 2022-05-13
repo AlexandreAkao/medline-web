@@ -17,7 +17,9 @@ function LandingPage() {
     <LandingPageContainer>
       <Header icon={MedlineLogo} iconAlt="Medline logo" isAuthenticated={false}>
         <HeaderItem as="button">Cadastro</HeaderItem>
-        <HeaderItem as="link">Entrar</HeaderItem>
+        <HeaderItem as="link" href="/login">
+          Entrar
+        </HeaderItem>
       </Header>
 
       <LandingPageMain>
