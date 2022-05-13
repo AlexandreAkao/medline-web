@@ -1,4 +1,5 @@
 import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { renderWithRouter } from 'utils/testWrapper';
 import LandingPage from 'pages/LandingPage';
@@ -23,5 +24,16 @@ describe('LandingPage', () => {
     expect(heading).toHaveLength(2);
     expect(switchElement).toBeInTheDocument();
     expect(HeaderElement).toBeInTheDocument();
+  });
+
+  it('should redirect to login page', async () => {
+    const { history } = renderComponent();
+
+    const loginElement = screen.getByText('Entrar');
+    await userEvent.click(loginElement);
+
+    expect(loginElement).toBeInTheDocument();
+
+    expect(history.location.pathname).toBe('/login');
   });
 });

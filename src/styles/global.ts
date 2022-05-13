@@ -12,16 +12,11 @@ export default createGlobalStyle`
   }
 
   html, body, #root {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
     min-height: 100%;
     height: 100%;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    -webkit-font-smoothing: antialiased;
+    overflow: auto;
   }
 
   button {

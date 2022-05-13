@@ -18,6 +18,7 @@ function TextInput({
   mask = Mask.Empyt,
   onChange,
   Icon,
+  value,
 }: ITextInputProps) {
   const [showPassword, setShowPassword] = useState(false);
   const typeInput = useMemo(
@@ -38,15 +39,16 @@ function TextInput({
         {Icon && <Icon role="img" size={30} />}
         <InputMask
           mask={mask}
-          color="#fafa"
           onChange={onChange}
           placeholder={placeholder}
           type={typeInput}
+          value={value}
         >
           {(inputProps: Props) => {
             return (
               <TextInputStyled
                 {...inputProps}
+                value={value}
                 onChange={onChange}
                 maxLength={maxLength}
                 data-testid="test-input"
