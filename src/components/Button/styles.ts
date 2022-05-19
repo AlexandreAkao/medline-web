@@ -4,9 +4,9 @@ import colors from 'styles/colors';
 
 const getButtonSize = (size: ButtonSize) => {
   const sizeMap = {
-    small: '5px 20px',
-    medium: '10px 40px',
-    large: '10px 60px',
+    small: '0.3125rem 1.25rem',
+    medium: '0.625rem 2.5rem',
+    large: '0.625rem 3.75rem',
   };
   return sizeMap[size];
 };

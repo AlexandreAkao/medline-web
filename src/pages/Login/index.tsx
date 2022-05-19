@@ -1,5 +1,6 @@
 import { FaUserAlt, FaLock } from 'react-icons/fa';
 import { ChangeEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   LoginBackground,
@@ -20,6 +21,7 @@ import Button from 'components/Button';
 import api from 'service/api';
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
@@ -36,6 +38,10 @@ function Login() {
       email,
       password,
     });
+  };
+
+  const handleRegister = () => {
+    navigate('/register');
   };
 
   return (
@@ -74,7 +80,7 @@ function Login() {
               <Button primary={false} size="large" onClick={handleLogin}>
                 Login
               </Button>
-              <Button primary={false} size="large">
+              <Button primary={false} size="large" onClick={handleRegister}>
                 Cadastrar
               </Button>
             </LoginFormButtons>

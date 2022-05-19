@@ -1,4 +1,4 @@
-interface ITextInputProps {
+interface ITextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   placeholder?: string;
   maxLength?: number;

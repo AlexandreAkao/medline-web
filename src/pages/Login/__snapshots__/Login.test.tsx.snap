@@ -37,7 +37,7 @@ exports[`Login > should match with snapshot 1`] = `
             Entre com seu acesso
           </h1>
           <div
-            class="sc-bczRLJ goEvZo"
+            class="sc-bczRLJ itlDIl"
           >
             <span
               class="sc-gsnTZi hQBPqr"
@@ -46,7 +46,7 @@ exports[`Login > should match with snapshot 1`] = `
               Usuário
             </span>
             <div
-              class="sc-dkzDqf jCRXTX"
+              class="sc-dkzDqf cKodea"
             >
               <svg
                 fill="currentColor"
@@ -63,7 +63,7 @@ exports[`Login > should match with snapshot 1`] = `
                 />
               </svg>
               <input
-                class="sc-hKMtZM hjyomr"
+                class="sc-hKMtZM fIniom"
                 data-testid="test-input"
                 placeholder="Email"
                 type="text"
@@ -72,7 +72,7 @@ exports[`Login > should match with snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-bczRLJ goEvZo"
+            class="sc-bczRLJ itlDIl"
           >
             <span
               class="sc-gsnTZi hQBPqr"
@@ -81,7 +81,7 @@ exports[`Login > should match with snapshot 1`] = `
               Senha
             </span>
             <div
-              class="sc-dkzDqf jCRXTX"
+              class="sc-dkzDqf cKodea"
             >
               <svg
                 fill="currentColor"
@@ -98,7 +98,7 @@ exports[`Login > should match with snapshot 1`] = `
                 />
               </svg>
               <input
-                class="sc-hKMtZM hjyomr"
+                class="sc-hKMtZM fIniom"
                 data-testid="test-input"
                 placeholder="Senha"
                 type="password"
@@ -148,12 +148,12 @@ exports[`Login > should match with snapshot 1`] = `
             class="sc-iqcoie dLlhNV"
           >
             <button
-              class="sc-bjUoiL ggsSmf"
+              class="sc-bjUoiL IuPno"
             >
               Login
             </button>
             <button
-              class="sc-bjUoiL ggsSmf"
+              class="sc-bjUoiL IuPno"
             >
               Cadastrar
             </button>

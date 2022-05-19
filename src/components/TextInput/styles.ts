@@ -6,6 +6,7 @@ import { getColorAlpha } from 'utils/colors';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 export const LabelTitle = styled.span`
@@ -23,7 +24,6 @@ export const TextInputContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 16px;
   background-color: ${colors.white.normal};
 
   svg:first-child {
@@ -39,6 +39,7 @@ export const TextInputStyled = styled.input`
   height: 100%;
   border: 0;
   font-size: 1.1rem;
+  padding: 0 16px;
   color: ${colors.black.soft};
   font-weight: 500;
   border-radius: 8px;

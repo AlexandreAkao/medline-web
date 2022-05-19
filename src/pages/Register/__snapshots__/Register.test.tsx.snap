@@ -1,0 +1,358 @@
+// Vitest Snapshot v1
+
+exports[`Login > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ fLfyXd"
+  >
+    <header
+      class="sc-jqUVSM fwhgdN"
+      data-testid="test-navigation"
+    >
+      <img
+        alt="Medline logo"
+        class="sc-kDDrLX hpoGZy"
+        src="/src/assets/images/medline-logo.svg"
+      />
+      <nav
+        class="sc-iqcoie eqtvLv"
+        data-testid="test-navigation-items"
+      />
+    </header>
+    <div
+      class="sc-gsnTZi dXGIgA"
+    >
+      <div
+        class="sc-dkzDqf iIpbcV"
+      />
+      <div
+        class="sc-hKMtZM gDVjvv"
+      >
+        <h1
+          class="sc-eCYdqJ eVEZxl"
+        >
+          Informe seus dados
+        </h1>
+        <div
+          class="sc-jSMfEi dnSuBL"
+        >
+          <div
+            class="sc-crXcEl bPbGdt"
+          >
+            <span
+              class="sc-evZas KiBlB"
+              data-testid="test-input-label"
+            >
+              Nome
+            </span>
+            <div
+              class="sc-breuTD dtlAFk"
+            >
+              <input
+                class="sc-ksZaOG kfgmKs"
+                data-testid="test-input"
+                name="name"
+                placeholder="Nome"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="sc-crXcEl bPbGdt"
+          >
+            <span
+              class="sc-evZas KiBlB"
+              data-testid="test-input-label"
+            >
+              Data de Nascimento
+            </span>
+            <div
+              class="sc-breuTD dtlAFk"
+            >
+              <input
+                class="sc-ksZaOG kfgmKs"
+                data-testid="test-input"
+                name="birth"
+                placeholder="Data de Nascimento"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-jSMfEi dnSuBL"
+        >
+          <div
+            class="sc-crXcEl bPbGdt"
+          >
+            <span
+              class="sc-evZas KiBlB"
+              data-testid="test-input-label"
+            >
+              CPF
+            </span>
+            <div
+              class="sc-breuTD dtlAFk"
+            >
+              <input
+                class="sc-ksZaOG kfgmKs"
+                data-testid="test-input"
+                placeholder="CPF"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="sc-crXcEl bPbGdt"
+          >
+            <span
+              class="sc-evZas KiBlB"
+              data-testid="test-input-label"
+            >
+              RG
+            </span>
+            <div
+              class="sc-breuTD dtlAFk"
+            >
+              <input
+                class="sc-ksZaOG kfgmKs"
+                data-testid="test-input"
+                placeholder="RG"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-crXcEl bPbGdt"
+        >
+          <span
+            class="sc-evZas KiBlB"
+            data-testid="test-input-label"
+          >
+            Email
+          </span>
+          <div
+            class="sc-breuTD dtlAFk"
+          >
+            <input
+              class="sc-ksZaOG kfgmKs"
+              data-testid="test-input"
+              placeholder="Email"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="sc-crXcEl bPbGdt"
+        >
+          <span
+            class="sc-evZas KiBlB"
+            data-testid="test-input-label"
+          >
+            Senha
+          </span>
+          <div
+            class="sc-breuTD dtlAFk"
+          >
+            <input
+              class="sc-ksZaOG kfgmKs"
+              data-testid="test-input"
+              placeholder="Senha"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="sc-crXcEl bPbGdt"
+        >
+          <span
+            class="sc-evZas KiBlB"
+            data-testid="test-input-label"
+          >
+            Confirmar senha
+          </span>
+          <div
+            class="sc-breuTD dtlAFk"
+          >
+            <input
+              class="sc-ksZaOG kfgmKs"
+              data-testid="test-input"
+              placeholder="Confirmar senha"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="sc-iBkjds cqMmdU"
+        >
+          <h1
+            class="sc-gKXOVf kEyzby"
+          >
+            Endereço
+          </h1>
+          <div
+            class="sc-jSMfEi dnSuBL"
+          >
+            <div
+              class="sc-crXcEl bPbGdt"
+            >
+              <span
+                class="sc-evZas KiBlB"
+                data-testid="test-input-label"
+              >
+                CEP
+              </span>
+              <div
+                class="sc-breuTD dtlAFk"
+              >
+                <input
+                  class="sc-ksZaOG kfgmKs"
+                  data-testid="test-input"
+                  placeholder="CEP"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="sc-crXcEl bPbGdt"
+            >
+              <span
+                class="sc-evZas KiBlB"
+                data-testid="test-input-label"
+              >
+                Estado
+              </span>
+              <div
+                class="sc-breuTD dtlAFk"
+              >
+                <input
+                  class="sc-ksZaOG kfgmKs"
+                  data-testid="test-input"
+                  placeholder="Estado"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSMfEi dnSuBL"
+          >
+            <div
+              class="sc-crXcEl bPbGdt"
+            >
+              <span
+                class="sc-evZas KiBlB"
+                data-testid="test-input-label"
+              >
+                Rua
+              </span>
+              <div
+                class="sc-breuTD dtlAFk"
+              >
+                <input
+                  class="sc-ksZaOG kfgmKs"
+                  data-testid="test-input"
+                  placeholder="Cidade"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="sc-crXcEl bPbGdt"
+            >
+              <span
+                class="sc-evZas KiBlB"
+                data-testid="test-input-label"
+              >
+                Cidade
+              </span>
+              <div
+                class="sc-breuTD dtlAFk"
+              >
+                <input
+                  class="sc-ksZaOG kfgmKs"
+                  data-testid="test-input"
+                  placeholder="Cidade"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSMfEi dnSuBL"
+          >
+            <div
+              class="sc-crXcEl bPbGdt"
+            >
+              <span
+                class="sc-evZas KiBlB"
+                data-testid="test-input-label"
+              >
+                Nº Residência
+              </span>
+              <div
+                class="sc-breuTD dtlAFk"
+              >
+                <input
+                  class="sc-ksZaOG kfgmKs"
+                  data-testid="test-input"
+                  placeholder="Nº Residência"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="sc-crXcEl bPbGdt"
+            >
+              <span
+                class="sc-evZas KiBlB"
+                data-testid="test-input-label"
+              >
+                Bairro
+              </span>
+              <div
+                class="sc-breuTD dtlAFk"
+              >
+                <input
+                  class="sc-ksZaOG kfgmKs"
+                  data-testid="test-input"
+                  placeholder="Bairro"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-ftvSup ioFdsF"
+        >
+          <button
+            class="sc-hAZoDl dOumGH"
+          >
+            Voltar
+          </button>
+          <button
+            class="sc-hAZoDl dOumGH"
+          >
+            Cadastrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
