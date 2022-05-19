@@ -3,13 +3,13 @@
 exports[`TextInput > should match with snapshot 1`] = `
 <div>
   <div
-    class="sc-bczRLJ goEvZo"
+    class="sc-bczRLJ itlDIl"
   >
     <div
-      class="sc-dkzDqf jCRXTX"
+      class="sc-dkzDqf cKodea"
     >
       <input
-        class="sc-hKMtZM hjyomr"
+        class="sc-hKMtZM fIniom"
         data-testid="test-input"
         placeholder="any_placeholder"
         type="text"

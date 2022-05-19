@@ -19,6 +19,7 @@ function TextInput({
   onChange,
   Icon,
   value,
+  ...rest
 }: ITextInputProps) {
   const [showPassword, setShowPassword] = useState(false);
   const typeInput = useMemo(
@@ -38,6 +39,7 @@ function TextInput({
       <TextInputContainer>
         {Icon && <Icon role="img" size={30} />}
         <InputMask
+          {...rest}
           mask={mask}
           onChange={onChange}
           placeholder={placeholder}
