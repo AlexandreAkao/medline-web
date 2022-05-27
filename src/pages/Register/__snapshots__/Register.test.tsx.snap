@@ -1,23 +1,42 @@
 // Vitest Snapshot v1
 
-exports[`Login > should match with snapshot 1`] = `
+exports[`Register > should match with snapshot 1`] = `
 <div>
   <div
     class="sc-bczRLJ fLfyXd"
   >
     <header
-      class="sc-jqUVSM fwhgdN"
+      class="sc-breuTD bvHIRC"
       data-testid="test-navigation"
     >
       <img
         alt="Medline logo"
-        class="sc-kDDrLX hpoGZy"
+        class="sc-ksZaOG hdhcOY"
         src="/src/assets/images/medline-logo.svg"
       />
       <nav
-        class="sc-iqcoie eqtvLv"
+        class="sc-hAZoDl jYIcRX"
         data-testid="test-navigation-items"
-      />
+      >
+        <div
+          class="sc-evZas gLFSKm"
+        >
+          <button
+            class="sc-crXcEl CHpSV"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-evZas gLFSKm"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
     </header>
     <div
       class="sc-gsnTZi dXGIgA"
@@ -37,19 +56,19 @@ exports[`Login > should match with snapshot 1`] = `
           class="sc-jSMfEi dnSuBL"
         >
           <div
-            class="sc-crXcEl bPbGdt"
+            class="sc-papXJ dIxUuV"
           >
             <span
-              class="sc-evZas KiBlB"
+              class="sc-jqUVSM dcSCwQ"
               data-testid="test-input-label"
             >
               Nome
             </span>
             <div
-              class="sc-breuTD dtlAFk"
+              class="sc-kDDrLX hotFGy"
             >
               <input
-                class="sc-ksZaOG kfgmKs"
+                class="sc-iqcoie jqtTIz"
                 data-testid="test-input"
                 name="name"
                 placeholder="Nome"
@@ -59,19 +78,19 @@ exports[`Login > should match with snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-crXcEl bPbGdt"
+            class="sc-papXJ dIxUuV"
           >
             <span
-              class="sc-evZas KiBlB"
+              class="sc-jqUVSM dcSCwQ"
               data-testid="test-input-label"
             >
               Data de Nascimento
             </span>
             <div
-              class="sc-breuTD dtlAFk"
+              class="sc-kDDrLX hotFGy"
             >
               <input
-                class="sc-ksZaOG kfgmKs"
+                class="sc-iqcoie jqtTIz"
                 data-testid="test-input"
                 name="birth"
                 placeholder="Data de Nascimento"
@@ -85,19 +104,19 @@ exports[`Login > should match with snapshot 1`] = `
           class="sc-jSMfEi dnSuBL"
         >
           <div
-            class="sc-crXcEl bPbGdt"
+            class="sc-papXJ dIxUuV"
           >
             <span
-              class="sc-evZas KiBlB"
+              class="sc-jqUVSM dcSCwQ"
               data-testid="test-input-label"
             >
               CPF
             </span>
             <div
-              class="sc-breuTD dtlAFk"
+              class="sc-kDDrLX hotFGy"
             >
               <input
-                class="sc-ksZaOG kfgmKs"
+                class="sc-iqcoie jqtTIz"
                 data-testid="test-input"
                 placeholder="CPF"
                 type="text"
@@ -106,19 +125,19 @@ exports[`Login > should match with snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-crXcEl bPbGdt"
+            class="sc-papXJ dIxUuV"
           >
             <span
-              class="sc-evZas KiBlB"
+              class="sc-jqUVSM dcSCwQ"
               data-testid="test-input-label"
             >
               RG
             </span>
             <div
-              class="sc-breuTD dtlAFk"
+              class="sc-kDDrLX hotFGy"
             >
               <input
-                class="sc-ksZaOG kfgmKs"
+                class="sc-iqcoie jqtTIz"
                 data-testid="test-input"
                 placeholder="RG"
                 type="text"
@@ -128,19 +147,19 @@ exports[`Login > should match with snapshot 1`] = `
           </div>
         </div>
         <div
-          class="sc-crXcEl bPbGdt"
+          class="sc-papXJ dIxUuV"
         >
           <span
-            class="sc-evZas KiBlB"
+            class="sc-jqUVSM dcSCwQ"
             data-testid="test-input-label"
           >
             Email
           </span>
           <div
-            class="sc-breuTD dtlAFk"
+            class="sc-kDDrLX hotFGy"
           >
             <input
-              class="sc-ksZaOG kfgmKs"
+              class="sc-iqcoie jqtTIz"
               data-testid="test-input"
               placeholder="Email"
               type="text"
@@ -149,19 +168,19 @@ exports[`Login > should match with snapshot 1`] = `
           </div>
         </div>
         <div
-          class="sc-crXcEl bPbGdt"
+          class="sc-papXJ dIxUuV"
         >
           <span
-            class="sc-evZas KiBlB"
+            class="sc-jqUVSM dcSCwQ"
             data-testid="test-input-label"
           >
             Senha
           </span>
           <div
-            class="sc-breuTD dtlAFk"
+            class="sc-kDDrLX hotFGy"
           >
             <input
-              class="sc-ksZaOG kfgmKs"
+              class="sc-iqcoie jqtTIz"
               data-testid="test-input"
               placeholder="Senha"
               type="text"
@@ -170,19 +189,19 @@ exports[`Login > should match with snapshot 1`] = `
           </div>
         </div>
         <div
-          class="sc-crXcEl bPbGdt"
+          class="sc-papXJ dIxUuV"
         >
           <span
-            class="sc-evZas KiBlB"
+            class="sc-jqUVSM dcSCwQ"
             data-testid="test-input-label"
           >
             Confirmar senha
           </span>
           <div
-            class="sc-breuTD dtlAFk"
+            class="sc-kDDrLX hotFGy"
           >
             <input
-              class="sc-ksZaOG kfgmKs"
+              class="sc-iqcoie jqtTIz"
               data-testid="test-input"
               placeholder="Confirmar senha"
               type="text"
@@ -202,19 +221,19 @@ exports[`Login > should match with snapshot 1`] = `
             class="sc-jSMfEi dnSuBL"
           >
             <div
-              class="sc-crXcEl bPbGdt"
+              class="sc-papXJ dIxUuV"
             >
               <span
-                class="sc-evZas KiBlB"
+                class="sc-jqUVSM dcSCwQ"
                 data-testid="test-input-label"
               >
                 CEP
               </span>
               <div
-                class="sc-breuTD dtlAFk"
+                class="sc-kDDrLX hotFGy"
               >
                 <input
-                  class="sc-ksZaOG kfgmKs"
+                  class="sc-iqcoie jqtTIz"
                   data-testid="test-input"
                   placeholder="CEP"
                   type="text"
@@ -223,19 +242,19 @@ exports[`Login > should match with snapshot 1`] = `
               </div>
             </div>
             <div
-              class="sc-crXcEl bPbGdt"
+              class="sc-papXJ dIxUuV"
             >
               <span
-                class="sc-evZas KiBlB"
+                class="sc-jqUVSM dcSCwQ"
                 data-testid="test-input-label"
               >
                 Estado
               </span>
               <div
-                class="sc-breuTD dtlAFk"
+                class="sc-kDDrLX hotFGy"
               >
                 <input
-                  class="sc-ksZaOG kfgmKs"
+                  class="sc-iqcoie jqtTIz"
                   data-testid="test-input"
                   placeholder="Estado"
                   type="text"
@@ -248,20 +267,21 @@ exports[`Login > should match with snapshot 1`] = `
             class="sc-jSMfEi dnSuBL"
           >
             <div
-              class="sc-crXcEl bPbGdt"
+              class="sc-papXJ dIxUuV"
             >
               <span
-                class="sc-evZas KiBlB"
+                class="sc-jqUVSM dcSCwQ"
                 data-testid="test-input-label"
               >
                 Rua
               </span>
               <div
-                class="sc-breuTD dtlAFk"
+                class="sc-kDDrLX hotFGy"
               >
                 <input
-                  class="sc-ksZaOG kfgmKs"
+                  class="sc-iqcoie jqtTIz"
                   data-testid="test-input"
+                  name="street-address"
                   placeholder="Cidade"
                   type="text"
                   value=""
@@ -269,19 +289,19 @@ exports[`Login > should match with snapshot 1`] = `
               </div>
             </div>
             <div
-              class="sc-crXcEl bPbGdt"
+              class="sc-papXJ dIxUuV"
             >
               <span
-                class="sc-evZas KiBlB"
+                class="sc-jqUVSM dcSCwQ"
                 data-testid="test-input-label"
               >
                 Cidade
               </span>
               <div
-                class="sc-breuTD dtlAFk"
+                class="sc-kDDrLX hotFGy"
               >
                 <input
-                  class="sc-ksZaOG kfgmKs"
+                  class="sc-iqcoie jqtTIz"
                   data-testid="test-input"
                   placeholder="Cidade"
                   type="text"
@@ -294,19 +314,19 @@ exports[`Login > should match with snapshot 1`] = `
             class="sc-jSMfEi dnSuBL"
           >
             <div
-              class="sc-crXcEl bPbGdt"
+              class="sc-papXJ dIxUuV"
             >
               <span
-                class="sc-evZas KiBlB"
+                class="sc-jqUVSM dcSCwQ"
                 data-testid="test-input-label"
               >
                 Nº Residência
               </span>
               <div
-                class="sc-breuTD dtlAFk"
+                class="sc-kDDrLX hotFGy"
               >
                 <input
-                  class="sc-ksZaOG kfgmKs"
+                  class="sc-iqcoie jqtTIz"
                   data-testid="test-input"
                   placeholder="Nº Residência"
                   type="text"
@@ -315,19 +335,19 @@ exports[`Login > should match with snapshot 1`] = `
               </div>
             </div>
             <div
-              class="sc-crXcEl bPbGdt"
+              class="sc-papXJ dIxUuV"
             >
               <span
-                class="sc-evZas KiBlB"
+                class="sc-jqUVSM dcSCwQ"
                 data-testid="test-input-label"
               >
                 Bairro
               </span>
               <div
-                class="sc-breuTD dtlAFk"
+                class="sc-kDDrLX hotFGy"
               >
                 <input
-                  class="sc-ksZaOG kfgmKs"
+                  class="sc-iqcoie jqtTIz"
                   data-testid="test-input"
                   placeholder="Bairro"
                   type="text"
@@ -341,12 +361,12 @@ exports[`Login > should match with snapshot 1`] = `
           class="sc-ftvSup ioFdsF"
         >
           <button
-            class="sc-hAZoDl dOumGH"
+            class="sc-crXcEl kULOXI"
           >
             Voltar
           </button>
           <button
-            class="sc-hAZoDl dOumGH"
+            class="sc-crXcEl kULOXI"
           >
             Cadastrar
           </button>
@@ -354,5 +374,6 @@ exports[`Login > should match with snapshot 1`] = `
       </div>
     </div>
   </div>
+  ,
 </div>
 `;

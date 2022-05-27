@@ -12,57 +12,19 @@ import {
   RegisterFormTittle,
   AddressFormButtonsContainer,
 } from 'pages/Register/styles';
-import Header from 'components/Header';
-import MedlineLogo from 'assets/images/medline-logo.svg';
 import TextInput from 'components/TextInput';
 import { Mask } from 'utils/mask';
 import Button from 'components/Button';
 import api from 'service/api';
+import MedlineHeader from 'components/Header/MedlineHeader';
+import { userFormInitialState, userFormReducer } from './reducer';
 
 function Register() {
-  const [userForm, dispatchUserForm] = useReducer(
-    (state: IUserRegister, action: IUserRegisterAction) => {
-      switch (action.type) {
-        case 'name':
-        case 'password':
-        case 'email':
-        case 'cpf':
-        case 'rg':
-          return { ...state, [action.type]: action.payload };
-        case 'birthdate':
-          return { ...state, [action.type]: action.payload.split('/').reverse().join('-') };
-        case 'cep':
-        case 'street':
-        case 'number':
-        case 'city':
-        case 'state':
-        case 'district':
-          return { ...state, address: { ...state.address, [action.type]: action.payload } };
-        default:
-          return state;
-      }
-    },
-    {
-      name: '',
-      password: '',
-      email: '',
-      birthdate: '',
-      cpf: '',
-      rg: '',
-      address: {
-        cep: '',
-        city: '',
-        district: '',
-        number: '',
-        state: '',
-        street: '',
-      },
-    },
-  );
+  const [userForm, dispatchUserForm] = useReducer(userFormReducer, userFormInitialState);
   const navigate = useNavigate();
 
-  const handleGoLoginPage = () => {
-    navigate('/login');
+  const handleGoBack = () => {
+    navigate(-1);
   };
 
   const handleChangeInput = (type: UserRegisterTypes) => (event: ChangeEvent<HTMLInputElement>) =>
@@ -74,7 +36,8 @@ function Register() {
 
   return (
     <RegisterContainer>
-      <Header icon={MedlineLogo} iconAlt="Medline logo" isAuthenticated={false} />
+      <MedlineHeader />
+
       <RegisterContent>
         <RegisterBackground />
 
@@ -156,6 +119,7 @@ function Register() {
                 placeholder="Cidade"
                 onChange={handleChangeInput('street')}
                 value={userForm.address.street}
+                name="street-address"
               />
               <TextInput
                 label="Cidade"
@@ -180,7 +144,7 @@ function Register() {
             </RegisterFormRow>
           </AddressFormSection>
           <AddressFormButtonsContainer>
-            <Button primary={false} size="large" onClick={handleGoLoginPage}>
+            <Button primary={false} size="large" onClick={handleGoBack}>
               Voltar
             </Button>
             <Button primary={false} size="large" onClick={handleRegisterUserButton}>

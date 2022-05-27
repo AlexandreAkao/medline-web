@@ -17,9 +17,5 @@ export const HeaderItemContainer = styled.div`
       transition: 0.2s ease all;
       color: ${colors.white.light};
     }
-
-    * {
-      margin-left: 8px;
-    }
   }
 `;

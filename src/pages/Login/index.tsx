@@ -13,15 +13,15 @@ import {
   LoginRemember,
   LoginTitle,
 } from 'pages/Login/styles';
-import MedlineLogo from 'assets/images/medline-logo.svg';
-import Header from 'components/Header';
 import TextInput from 'components/TextInput';
 import Checkbox from 'components/Checkbox';
 import Button from 'components/Button';
-import api from 'service/api';
+import { useAuth } from 'hooks/useAuth';
+import MedlineHeader from 'components/Header/MedlineHeader';
 
 function Login() {
   const navigate = useNavigate();
+  const { handleLogin } = useAuth();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
@@ -33,20 +33,13 @@ function Login() {
     setPassword(event.target.value);
   };
 
-  const handleLogin = () => {
-    api.post('login', {
-      email,
-      password,
-    });
-  };
-
   const handleRegister = () => {
     navigate('/register');
   };
 
   return (
     <LoginContainer>
-      <Header icon={MedlineLogo} iconAlt="Medline logo" isAuthenticated={false} />
+      <MedlineHeader />
 
       <LoginContent>
         <LoginBackground />
@@ -77,7 +70,7 @@ function Login() {
             </LoginRemember>
 
             <LoginFormButtons>
-              <Button primary={false} size="large" onClick={handleLogin}>
+              <Button primary={false} size="large" onClick={() => handleLogin({ email, password })}>
                 Login
               </Button>
               <Button primary={false} size="large" onClick={handleRegister}>

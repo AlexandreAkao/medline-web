@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { HeaderItemContainer } from 'components/HeaderItem/styles';
 import colors from 'styles/colors';
 import zIndexPriority from 'styles/zIndexPriority';
+import ScreenSizes from 'styles/screenSizes';
 
 export const Nav = styled.header<Pick<IHeaderProps, 'isAuthenticated'>>`
   width: 100%;
@@ -15,6 +16,10 @@ export const Nav = styled.header<Pick<IHeaderProps, 'isAuthenticated'>>`
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
+
+  @media (max-width: ${ScreenSizes.medium}) {
+    box-shadow: none;
+  }
 `;
 
 export const LogoImg = styled.img`

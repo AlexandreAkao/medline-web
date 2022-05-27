@@ -11,6 +11,7 @@ export const DropdownContainer = styled.div`
   background-color: #fff;
   align-items: center;
   height: 80px;
+  width: 100%;
 
   ${ButtonContainer} {
     box-shadow: none;

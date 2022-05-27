@@ -6,18 +6,37 @@ exports[`Login > should match with snapshot 1`] = `
     class="sc-eCYdqJ kKlpka"
   >
     <header
-      class="sc-evZas gfsLSE"
+      class="sc-fnykZs goXKXN"
       data-testid="test-navigation"
     >
       <img
         alt="Medline logo"
-        class="sc-breuTD evQrv"
+        class="sc-fEOsli bGitPF"
         src="/src/assets/images/medline-logo.svg"
       />
       <nav
-        class="sc-ksZaOG gfaVmQ"
+        class="sc-bjUoiL dEUTdv"
         data-testid="test-navigation-items"
-      />
+      >
+        <div
+          class="sc-hAZoDl cJByLp"
+        >
+          <button
+            class="sc-ksZaOG ioDaHZ"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-hAZoDl cJByLp"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
     </header>
     <div
       class="sc-jSMfEi clAKAo"
@@ -40,13 +59,13 @@ exports[`Login > should match with snapshot 1`] = `
             class="sc-bczRLJ itlDIl"
           >
             <span
-              class="sc-gsnTZi hQBPqr"
+              class="sc-gsnTZi jYHEuj"
               data-testid="test-input-label"
             >
               Usuário
             </span>
             <div
-              class="sc-dkzDqf cKodea"
+              class="sc-dkzDqf bMJUCZ"
             >
               <svg
                 fill="currentColor"
@@ -75,13 +94,13 @@ exports[`Login > should match with snapshot 1`] = `
             class="sc-bczRLJ itlDIl"
           >
             <span
-              class="sc-gsnTZi hQBPqr"
+              class="sc-gsnTZi jYHEuj"
               data-testid="test-input-label"
             >
               Senha
             </span>
             <div
-              class="sc-dkzDqf cKodea"
+              class="sc-dkzDqf bMJUCZ"
             >
               <svg
                 fill="currentColor"
@@ -125,15 +144,15 @@ exports[`Login > should match with snapshot 1`] = `
             class="sc-kDDrLX uIVyf"
           >
             <div
-              class="sc-fEOsli jEnrdu"
+              class="sc-breuTD jsJxhM"
             >
               <input
-                class="sc-hAZoDl bTYnfs"
+                class="sc-crXcEl eQIjlf"
                 name=""
                 type="checkbox"
               />
               <label
-                class="sc-fnykZs geGWTh"
+                class="sc-evZas fIBvGt"
               >
                 Lembrar de mim
               </label>
@@ -148,12 +167,12 @@ exports[`Login > should match with snapshot 1`] = `
             class="sc-iqcoie dLlhNV"
           >
             <button
-              class="sc-bjUoiL IuPno"
+              class="sc-ksZaOG dHWQgM"
             >
               Login
             </button>
             <button
-              class="sc-bjUoiL IuPno"
+              class="sc-ksZaOG dHWQgM"
             >
               Cadastrar
             </button>
@@ -162,5 +181,6 @@ exports[`Login > should match with snapshot 1`] = `
       </div>
     </div>
   </div>
+  ,
 </div>
 `;

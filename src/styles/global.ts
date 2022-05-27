@@ -23,10 +23,16 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+    background: none;
+    border: 0;
   }
 
   a {
     text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
   }
 
   @media (max-width: ${ScreenSizes.medium}) {
