@@ -1,19 +1,11 @@
 import { screen } from '@testing-library/react';
-// import userEvent from '@testing-library/user-event';
-import { vi } from 'vitest';
 
-import { renderWithRouter } from 'utils/testWrapper';
+import { renderWithProvider } from 'utils/testWrapper';
 import Register from 'pages/Register';
-// import api from 'service/api';
 
-// TODO add new test to send request
-vi.mock('service/api', () => ({
-  post: () => {},
-}));
-
-describe('Login', () => {
+describe('Register', () => {
   const renderComponent = () => {
-    return renderWithRouter(<Register />);
+    return renderWithProvider(<Register />);
   };
 
   it('should match with snapshot', () => {
@@ -25,31 +17,11 @@ describe('Login', () => {
     renderComponent();
 
     const titleElement = screen.getByText('Informe seus dados');
-    // const checkboxElement = screen.getByRole('checkbox');
-    // const buttonElements = screen.getAllByRole('button');
-    // const inputElements = screen.getAllByTestId('test-input');
+    const buttonElements = screen.getAllByRole('button');
+    const inputElements = screen.getAllByRole('textbox');
 
     expect(titleElement).toBeInTheDocument();
-    // expect(inputElements).toHaveLength(2);
-    // expect(checkboxElement).toBeInTheDocument();
-    // expect(buttonElements).toHaveLength(2);
+    expect(inputElements).toHaveLength(13);
+    expect(buttonElements).toHaveLength(3);
   });
-
-  // it('should send request when click on login button', async () => {
-  //   const post = vi.spyOn(api, 'post');
-  //   renderComponent();
-
-  //   const username = 'any_username';
-  //   const password = 'any_password';
-
-  //   const inputElements = screen.getAllByTestId('test-input');
-  //   const loginButton = screen.getByText('Login');
-
-  //   await userEvent.type(inputElements[0], username);
-  //   await userEvent.type(inputElements[1], password);
-
-  //   await userEvent.click(loginButton);
-
-  //   expect(post).toBeCalled();
-  // });
 });

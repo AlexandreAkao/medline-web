@@ -13,7 +13,7 @@ export const LabelTitle = styled.span`
   color: ${colors.white.normal};
   font-weight: 700;
   margin-bottom: 12px;
-  font-size: 1.125rem;
+  font-size: 1rem;
 `;
 
 export const TextInputContainer = styled.div`
@@ -26,8 +26,11 @@ export const TextInputContainer = styled.div`
   align-items: center;
   background-color: ${colors.white.normal};
 
+  svg {
+    margin: 10px;
+  }
+
   svg:first-child {
-    margin-right: 10px;
     border-right: 1px solid ${getColorAlpha(colors.grey.normal, 0.5)};
     padding-right: 10px;
     color: ${colors.primary};

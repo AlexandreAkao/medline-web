@@ -1,4 +1,5 @@
 import { FaHospitalAlt } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
 
 import {
   DropdownContainer,
@@ -7,27 +8,35 @@ import {
   Text1Container,
   Text2Container,
 } from 'pages/LandingPage/styles';
-import Header from 'components/Header';
-import HeaderItem from 'components/HeaderItem';
-import MedlineLogo from 'assets/images/medline-logo.svg';
 import Dropdown from 'components/Dropdown';
+import api from 'service/api';
+import MedlineHeader from 'components/Header/MedlineHeader';
 
 function LandingPage() {
+  const [ubs, setUbs] = useState<IUbsOptions[]>([]);
+
+  useEffect(() => {
+    api.get<IUbs[]>('ubs').then(ubsData => {
+      setUbs(
+        ubsData.data.map(ubsInfo => ({
+          ...ubsInfo,
+          label: ubsInfo.name,
+          value: String(ubsInfo.id),
+        })),
+      );
+    });
+  }, []);
+
   return (
     <LandingPageContainer>
-      <Header icon={MedlineLogo} iconAlt="Medline logo" isAuthenticated={false}>
-        <HeaderItem as="button">Cadastro</HeaderItem>
-        <HeaderItem as="link" href="/login">
-          Entrar
-        </HeaderItem>
-      </Header>
+      <MedlineHeader />
 
       <LandingPageMain>
         <DropdownContainer>
           <Dropdown
             placeholder="Escolha uma unidade de saúde"
             Icon={FaHospitalAlt}
-            options={[]}
+            options={ubs}
             buttonConfig={{ children: 'Procurar' }}
           />
         </DropdownContainer>

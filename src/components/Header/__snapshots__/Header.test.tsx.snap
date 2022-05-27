@@ -3,7 +3,7 @@
 exports[`Header > should match with snapshot 1`] = `
 <div>
   <header
-    class="sc-gsnTZi jKgsay"
+    class="sc-gsnTZi jLFYRz"
     data-testid="test-navigation"
   >
     <img

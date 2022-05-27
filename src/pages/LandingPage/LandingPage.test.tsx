@@ -1,12 +1,23 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { beforeEach, vi } from 'vitest';
 
-import { renderWithRouter } from 'utils/testWrapper';
+import { renderWithProvider } from 'utils/testWrapper';
 import LandingPage from 'pages/LandingPage';
+import api from 'service/api';
+import { ubsList } from '__tests__/mocks/ubs.mock';
 
 describe('LandingPage', () => {
+  beforeEach(() => {
+    vi.spyOn(api, 'get').mockImplementation(() =>
+      Promise.resolve({
+        data: ubsList,
+      }),
+    );
+  });
+
   const renderComponent = () => {
-    return renderWithRouter(<LandingPage />);
+    return renderWithProvider(<LandingPage />);
   };
 
   it('should match with snapshot', () => {

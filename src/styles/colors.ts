@@ -12,6 +12,7 @@ const colors = {
   },
   grey: {
     normal: '#808080',
+    dark: '#3d3d3d',
   },
 };
 
