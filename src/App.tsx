@@ -5,6 +5,7 @@ import LandingPage from 'pages/LandingPage';
 import Register from 'pages/Register';
 import QueuePage from 'pages/QueuePage';
 import { AuthProvider } from 'providers/AuthProvider';
+import RequestPage from 'pages/RequestPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/queue" element={<QueuePage />} />
+          <Route path="/request" element={<RequestPage />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

@@ -1,11 +1,12 @@
 import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { renderWithProvider } from 'utils/testWrapper';
 import Register from 'pages/Register';
 
 describe('Register', () => {
   const renderComponent = () => {
-    return renderWithProvider(<Register />);
+    return renderWithProvider(<Register />, { route: ['/', '/register'] });
   };
 
   it('should match with snapshot', () => {
@@ -23,5 +24,18 @@ describe('Register', () => {
     expect(titleElement).toBeInTheDocument();
     expect(inputElements).toHaveLength(13);
     expect(buttonElements).toHaveLength(3);
+  });
+
+  it('should redirect to previus page', async () => {
+    const { history } = renderComponent();
+
+    expect(history.location.pathname).toBe('/register');
+
+    const backElement = screen.getByText('Voltar');
+    await userEvent.click(backElement);
+
+    expect(backElement).toBeInTheDocument();
+
+    expect(history.location.pathname).toBe('/');
   });
 });

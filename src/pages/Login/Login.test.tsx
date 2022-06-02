@@ -7,14 +7,6 @@ import Login from 'pages/Login';
 import api from 'service/api';
 
 describe('Login', () => {
-  // beforeEach(() => {
-  //   vi.spyOn(api, 'get').mockImplementation(() =>
-  //     Promise.resolve({
-  //       data: ubsList,
-  //     }),
-  //   );
-  // });
-
   const renderComponent = () => {
     return renderWithProvider(<Login />);
   };
@@ -67,5 +59,16 @@ describe('Login', () => {
     await userEvent.click(loginButton);
 
     expect(post).toBeCalled();
+  });
+
+  it('should redirect to register page', async () => {
+    const { history } = renderComponent();
+
+    const registerElement = screen.getByText('Cadastrar');
+    await userEvent.click(registerElement);
+
+    expect(registerElement).toBeInTheDocument();
+
+    expect(history.location.pathname).toBe('/register');
   });
 });

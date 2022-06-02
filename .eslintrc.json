@@ -43,7 +43,7 @@
         "enableDangerousAutofixThisMayCauseInfiniteLoops": true
       }
     ],
-    // "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
     "@typescript-eslint/no-empty-function": [
       "error",
       { "allow": ["arrowFunctions"] }
