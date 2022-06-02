@@ -12,7 +12,6 @@ export function AuthProvider({ children }: IChildren) {
 
   const handleLogin = useCallback(
     async (userData: IUserLogin) => {
-      console.log(api);
       const userResponse = await api.post('login', userData);
 
       if (userResponse.status === 200) {

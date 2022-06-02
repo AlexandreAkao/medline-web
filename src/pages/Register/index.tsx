@@ -17,7 +17,7 @@ import { Mask } from 'utils/mask';
 import Button from 'components/Button';
 import api from 'service/api';
 import MedlineHeader from 'components/Header/MedlineHeader';
-import { userFormInitialState, userFormReducer } from './reducer';
+import { userFormInitialState, userFormReducer } from 'pages/Register/reducer';
 
 function Register() {
   const [userForm, dispatchUserForm] = useReducer(userFormReducer, userFormInitialState);

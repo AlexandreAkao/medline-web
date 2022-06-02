@@ -32,7 +32,9 @@ function MedlineHeader() {
     return signed && user ? (
       <>
         <HeaderItem as="link">Atestados/Receitas</HeaderItem>
-        <HeaderItem as="link">Solicitação</HeaderItem>
+        <HeaderItem as="link" href="/request">
+          Solicitação
+        </HeaderItem>
         <HeaderItem as="link">
           <OverflowMenu render={<FaRegUser size={20} />}>
             <OverflowMenuTitle>Olá, {user.name}</OverflowMenuTitle>
@@ -69,7 +71,7 @@ function MedlineHeader() {
           <FaReceipt />
           <span>Atestados/Receitas</span>
         </HeaderItem>
-        <HeaderItem>
+        <HeaderItem href="/request">
           <FaPlay />
           <span>Solicitação</span>
         </HeaderItem>
