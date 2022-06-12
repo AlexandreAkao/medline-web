@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { AuthProvider } from 'providers/AuthProvider';
 import Login from 'pages/Login';
 import LandingPage from 'pages/LandingPage';
 import Register from 'pages/Register';
 import QueuePage from 'pages/QueuePage';
-import { AuthProvider } from 'providers/AuthProvider';
 import RequestPage from 'pages/RequestPage';
+import EditProfile from 'pages/EditProfile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/queue" element={<QueuePage />} />
           <Route path="/request" element={<RequestPage />} />
+          <Route path="/edit-profile" element={<EditProfile />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
