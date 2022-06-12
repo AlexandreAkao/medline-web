@@ -1,0 +1,142 @@
+// Vitest Snapshot v1
+
+exports[`EditProfile > should match with snapshot 1`] = `
+<div>
+  <main
+    class="sc-jSMfEi sDxaw"
+  >
+    <header
+      class="sc-papXJ bicVkd"
+      data-testid="test-navigation"
+    >
+      <img
+        alt="Medline logo"
+        class="sc-jqUVSM dEwOGF"
+        src="/src/assets/images/medline-logo.svg"
+      />
+      <nav
+        class="sc-kDDrLX ekWlzz"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-ftvSup lpdRfb"
+        >
+          <button
+            class="sc-eCYdqJ fDdwce"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-ftvSup lpdRfb"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <section
+      class="sc-gKXOVf kQmpnx"
+    >
+      <h1
+        class="sc-iBkjds eYqXUC"
+      >
+        Editar Perfil
+      </h1>
+      <div
+        class="sc-bczRLJ itlDIl"
+      >
+        <span
+          class="sc-gsnTZi jYHEuj"
+          data-testid="test-input-label"
+        >
+          Nome
+        </span>
+        <div
+          class="sc-dkzDqf bMJUCZ"
+        >
+          <input
+            class="sc-hKMtZM fIniom"
+            data-testid="test-input"
+            placeholder="Nome"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ itlDIl"
+      >
+        <span
+          class="sc-gsnTZi jYHEuj"
+          data-testid="test-input-label"
+        >
+          Email
+        </span>
+        <div
+          class="sc-dkzDqf bMJUCZ"
+        >
+          <input
+            class="sc-hKMtZM fIniom"
+            data-testid="test-input"
+            placeholder="Email"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ itlDIl"
+      >
+        <span
+          class="sc-gsnTZi jYHEuj"
+          data-testid="test-input-label"
+        >
+          Senha
+        </span>
+        <div
+          class="sc-dkzDqf bMJUCZ"
+        >
+          <input
+            class="sc-hKMtZM fIniom"
+            data-testid="test-input"
+            placeholder="Senha"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ itlDIl"
+      >
+        <span
+          class="sc-gsnTZi jYHEuj"
+          data-testid="test-input-label"
+        >
+          Confirmar senha
+        </span>
+        <div
+          class="sc-dkzDqf bMJUCZ"
+        >
+          <input
+            class="sc-hKMtZM fIniom"
+            data-testid="test-input"
+            placeholder="Confirmar senha"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <button
+        class="sc-eCYdqJ kYzDoT"
+      >
+        Salvar
+      </button>
+    </section>
+  </main>
+  ,
+</div>
+`;
