@@ -1,0 +1,18 @@
+// Vitest Snapshot v1
+
+exports[`Table > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ duHOFq"
+  >
+    <table
+      role="table"
+    >
+      <thead />
+      <tbody
+        role="rowgroup"
+      />
+    </table>
+  </div>
+</div>
+`;

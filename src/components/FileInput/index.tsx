@@ -1,4 +1,4 @@
-import { ChangeEvent, MouseEvent, useRef } from 'react';
+import { ChangeEvent, useRef } from 'react';
 
 import Button from 'components/Button';
 import { FileInputContainer } from 'components/FileInput/styles';

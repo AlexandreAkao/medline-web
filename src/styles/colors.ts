@@ -1,10 +1,12 @@
 const colors = {
   primary: '#248F8D',
   primaryLight: '#279d9a',
+  primaryLighter: '#E9F4F4',
   white: {
     normal: '#fff',
-    lighter: '#f0f0f0',
     light: '#ccc',
+    lighter: '#f0f0f0',
+    lightest: '#fcfcfc',
   },
   black: {
     normal: '#000',
