@@ -2,13 +2,14 @@ import styled from 'styled-components';
 import { StylesConfig } from 'react-select';
 
 import { ButtonContainer } from 'components/Button/styles';
+import colors from 'styles/colors';
 
 export const DropdownContainer = styled.div`
   display: flex;
   border-radius: 12px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  background-color: #fff;
+  background-color: ${colors.white.normal};
   align-items: center;
   height: 80px;
   width: 100%;
