@@ -1,0 +1,246 @@
+// Vitest Snapshot v1
+
+exports[`PrescriptionPage > should match with snapshot 1`] = `
+<div>
+  <main
+    class="sc-hKMtZM euFtsb"
+  >
+    <header
+      class="sc-iBkjds gAPiSf"
+      data-testid="test-navigation"
+    >
+      <img
+        alt="Medline logo"
+        class="sc-ftvSup gzAWiR"
+        src="/src/assets/images/medline-logo.svg"
+      />
+      <nav
+        class="sc-papXJ kwFdqk"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-gKXOVf jkpgXy"
+        >
+          <button
+            class="sc-kDDrLX fEduZf"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-gKXOVf jkpgXy"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="sc-jSMfEi ksOgzB"
+    >
+      <h3
+        class="sc-eCYdqJ bQnWtR"
+      >
+        Atestados e Receitas
+      </h3>
+      <div
+        class="sc-bczRLJ iFSACV"
+      >
+        <span
+          class="sc-gsnTZi jjMMDi"
+        >
+          Teste1
+        </span>
+        <div
+          class="sc-dkzDqf fSfBPp"
+        >
+          <svg
+            class="icon-action"
+            data-testid="icon-ready-test"
+            fill="currentColor"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 20 20"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <svg
+            class="icon-action"
+            fill="currentColor"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 20 20"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <svg
+            class="icon-action"
+            fill="currentColor"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 20 20"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2h-1.528A6 6 0 004 9.528V4z"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M8 10a4 4 0 00-3.446 6.032l-1.261 1.26a1 1 0 101.414 1.415l1.261-1.261A4 4 0 108 10zm-2 4a2 2 0 114 0 2 2 0 01-4 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ iFSACV"
+      >
+        <span
+          class="sc-gsnTZi jjMMDi"
+        >
+          Teste2
+        </span>
+        <div
+          class="sc-dkzDqf fSfBPp"
+        >
+          <svg
+            class="icon-action"
+            data-testid="icon-cancel-test"
+            fill="currentColor"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 20 20"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <svg
+            class="icon-action"
+            fill="currentColor"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 20 20"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <svg
+            class="icon-action"
+            fill="currentColor"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 20 20"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2h-1.528A6 6 0 004 9.528V4z"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M8 10a4 4 0 00-3.446 6.032l-1.261 1.26a1 1 0 101.414 1.415l1.261-1.261A4 4 0 108 10zm-2 4a2 2 0 114 0 2 2 0 01-4 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ iFSACV"
+      >
+        <span
+          class="sc-gsnTZi jjMMDi"
+        >
+          Teste3
+        </span>
+        <div
+          class="sc-dkzDqf fSfBPp"
+        >
+          <svg
+            class="icon-action"
+            data-testid="icon-waiting-test"
+            fill="currentColor"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 384 512"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z"
+            />
+          </svg>
+          <svg
+            class="icon-action"
+            fill="currentColor"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 20 20"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <svg
+            class="icon-action"
+            fill="currentColor"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 20 20"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2h-1.528A6 6 0 004 9.528V4z"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M8 10a4 4 0 00-3.446 6.032l-1.261 1.26a1 1 0 101.414 1.415l1.261-1.261A4 4 0 108 10zm-2 4a2 2 0 114 0 2 2 0 01-4 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </main>
+  ,
+</div>
+`;
