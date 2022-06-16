@@ -8,6 +8,7 @@ import QueuePage from 'pages/QueuePage';
 import RequestPage from 'pages/RequestPage';
 import EditProfile from 'pages/EditProfile';
 import PrescriptionPage from 'pages/PrescriptionPage';
+import EmployeePatienteCare from 'pages/EmployeePatienteCare';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/request" element={<RequestPage />} />
           <Route path="/edit-profile" element={<EditProfile />} />
           <Route path="/prescription" element={<PrescriptionPage />} />
+          <Route path="/employee/patiente-care" element={<EmployeePatienteCare />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

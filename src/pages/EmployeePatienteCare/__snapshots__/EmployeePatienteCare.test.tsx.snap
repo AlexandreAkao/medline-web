@@ -1,0 +1,98 @@
+// Vitest Snapshot v1
+
+exports[`EmployeePatienteCare > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-evZas cdVbbs"
+  >
+    <header
+      class="sc-gsnTZi jLFYRz"
+      data-testid="test-navigation"
+    >
+      <img
+        alt="Medline logo"
+        class="sc-dkzDqf dxiqfB"
+        src="/src/assets/images/medline-logo.svg"
+      />
+      <nav
+        class="sc-hKMtZM iKwNjC"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-bczRLJ erPxbe"
+        >
+          <button
+            class="sc-jSMfEi bRzdms"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-bczRLJ erPxbe"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="sc-breuTD brCGDt"
+    >
+      <h1
+        class="sc-ksZaOG fvoegn"
+      >
+        Atendimento
+      </h1>
+      <div
+        class="sc-crXcEl kfoSoy"
+      >
+        <table
+          role="table"
+        >
+          <thead>
+            <tr
+              role="row"
+            >
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Lugar na fila
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Nome
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Previsão de atendimento
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Status
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              />
+            </tr>
+          </thead>
+          <tbody
+            role="rowgroup"
+          />
+        </table>
+      </div>
+    </div>
+  </div>
+  ,
+</div>
+`;
