@@ -9,6 +9,7 @@ import RequestPage from 'pages/RequestPage';
 import EditProfile from 'pages/EditProfile';
 import PrescriptionPage from 'pages/PrescriptionPage';
 import EmployeePatienteCare from 'pages/EmployeePatienteCare';
+import EmployeePrescription from 'pages/EmployeePrescription';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/edit-profile" element={<EditProfile />} />
           <Route path="/prescription" element={<PrescriptionPage />} />
           <Route path="/employee/patiente-care" element={<EmployeePatienteCare />} />
+          <Route path="/employee/prescription" element={<EmployeePrescription />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
