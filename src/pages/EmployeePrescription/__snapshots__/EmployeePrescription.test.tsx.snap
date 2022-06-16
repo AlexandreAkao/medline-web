@@ -1,0 +1,94 @@
+// Vitest Snapshot v1
+
+exports[`EmployeePrescription > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-gsnTZi fatJle"
+  >
+    <header
+      class="sc-jSMfEi jqMBOM"
+      data-testid="test-navigation"
+    >
+      <img
+        alt="Medline logo"
+        class="sc-gKXOVf dpNDyc"
+        src="/src/assets/images/medline-logo.svg"
+      />
+      <nav
+        class="sc-iBkjds iOmqAx"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-eCYdqJ fOTuBR"
+        >
+          <button
+            class="sc-papXJ eSvoFt"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-eCYdqJ fOTuBR"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="sc-dkzDqf erUcfj"
+    >
+      <h1
+        class="sc-hKMtZM cZFLfV"
+      >
+        Atestados e Receitas
+      </h1>
+      <div
+        class="sc-bczRLJ duHOFq"
+      >
+        <table
+          role="table"
+        >
+          <thead>
+            <tr
+              role="row"
+            >
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Lugar na fila
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Nome
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                CPF
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            role="rowgroup"
+          />
+        </table>
+      </div>
+    </div>
+  </div>
+  ,
+</div>
+`;

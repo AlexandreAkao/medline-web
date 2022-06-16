@@ -1,5 +1,3 @@
-import { AiOutlineEdit } from 'react-icons/ai';
-
 export const COLUMNS = [
   {
     Header: 'Lugar na fila',
@@ -10,16 +8,11 @@ export const COLUMNS = [
     accessor: 'lastName',
   },
   {
-    Header: 'Previsão de atendimento',
-    accessor: 'aaaaa',
+    Header: 'CPF',
+    accessor: 'cpf',
   },
   {
     Header: 'Status',
     accessor: 'status',
-  },
-  {
-    Header: '',
-    accessor: 'action',
-    Cell: () => <AiOutlineEdit />,
   },
 ];
