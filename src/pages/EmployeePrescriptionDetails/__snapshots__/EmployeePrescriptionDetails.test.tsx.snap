@@ -1,0 +1,109 @@
+// Vitest Snapshot v1
+
+exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-hAZoDl dERzXv"
+  >
+    <header
+      class="sc-dkzDqf WepAw"
+      data-testid="test-navigation"
+    >
+      <img
+        alt="Medline logo"
+        class="sc-hKMtZM hOePDa"
+        src="/src/assets/images/medline-logo.svg"
+      />
+      <nav
+        class="sc-eCYdqJ dDvGMN"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-gsnTZi qZpGk"
+        >
+          <button
+            class="sc-bczRLJ eeLoKZ"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-gsnTZi qZpGk"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="sc-fnykZs bAYsYk"
+    >
+      <h1
+        class="sc-ksZaOG fvoegn"
+      >
+        Atestados e Receitas
+      </h1>
+      <main
+        class="sc-bjUoiL cgFIRp"
+      >
+        <div
+          class="sc-idiyUo bsnWRQ"
+        >
+          <span>
+            Gilson Bezerra
+          </span>
+          <span>
+            000.000.000-00
+          </span>
+          <span>
+            Solicitação: Atestado
+          </span>
+          <span>
+            Data de envio: 18/03/22
+          </span>
+        </div>
+        <div
+          class="sc-dIouRR TPyNd"
+        >
+          <h1>
+            Descrição
+          </h1>
+          <span>
+            Desejo um atestado médico, pois testei positivo para covid-19
+          </span>
+        </div>
+      </main>
+      <button
+        class="sc-hHLeRK hgoXaG"
+      >
+        Baixar documento
+      </button>
+      <div
+        class="sc-dmRaPn djFJY"
+      >
+        <button
+          class="sc-bczRLJ fpIqOv"
+        >
+          Voltar
+        </button>
+        <div>
+          <button
+            class="sc-bczRLJ fpIqOv"
+          >
+            Negado
+          </button>
+          <button
+            class="sc-bczRLJ fpIqOv"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  ,
+</div>
+`;

@@ -10,6 +10,7 @@ import EditProfile from 'pages/EditProfile';
 import PrescriptionPage from 'pages/PrescriptionPage';
 import EmployeePatienteCare from 'pages/EmployeePatienteCare';
 import EmployeePrescription from 'pages/EmployeePrescription';
+import EmployeePrescriptionDetails from 'pages/EmployeePrescriptionDetails';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/prescription" element={<PrescriptionPage />} />
           <Route path="/employee/patiente-care" element={<EmployeePatienteCare />} />
           <Route path="/employee/prescription" element={<EmployeePrescription />} />
+          <Route path="/employee/prescription-details" element={<EmployeePrescriptionDetails />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

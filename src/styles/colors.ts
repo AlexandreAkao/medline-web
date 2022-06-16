@@ -16,6 +16,10 @@ const colors = {
     normal: '#808080',
     dark: '#3d3d3d',
   },
+  blue: {
+    normal: '#5041FF',
+    light: '#0075FF',
+  },
 };
 
 export default colors;
