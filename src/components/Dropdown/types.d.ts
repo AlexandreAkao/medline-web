@@ -14,4 +14,5 @@ interface IDropdownProps {
   onSelect?: (newValue: unknown, actionMeta: import('react-select').ActionMeta<unknown>) => void;
   buttonConfig?: IButtonConfig;
   Icon?: import('react-icons').IconType;
+  value?: IOption;
 }

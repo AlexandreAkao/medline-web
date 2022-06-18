@@ -3,7 +3,7 @@ import { CheckboxContainer, CheckboxInput, CheckboxLabel } from 'components/Chec
 function Checkbox({ id, children, primary, ...rest }: ICheckboxProps) {
   return (
     <CheckboxContainer primary={primary}>
-      <CheckboxInput {...rest} type="checkbox" name="" id={id} />
+      <CheckboxInput {...rest} type="checkbox" name={id} id={id} />
       <CheckboxLabel htmlFor={id}>{children}</CheckboxLabel>
     </CheckboxContainer>
   );

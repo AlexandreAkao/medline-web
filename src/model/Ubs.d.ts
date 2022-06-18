@@ -17,14 +17,12 @@ interface IUbs {
   updatedAt: string;
   name: string;
   address: Address;
+  doctors: number;
+  early_t: string;
+  late_t: string;
 }
 
-interface IUbsOptions {
-  id: number;
-  createdAt: string;
-  updatedAt: string;
-  name: string;
-  address: Address;
+interface IUbsOptions extends IUbs {
   value: string;
   label: string;
 }

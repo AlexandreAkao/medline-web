@@ -1,5 +1,6 @@
 import { FaHospitalAlt } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   DropdownContainer,
@@ -11,9 +12,12 @@ import {
 import Dropdown from 'components/Dropdown';
 import api from 'service/api';
 import MedlineHeader from 'components/Header/MedlineHeader';
+import { useAuth } from 'hooks/useAuth';
 
 function LandingPage() {
   const [ubs, setUbs] = useState<IUbsOptions[]>([]);
+  const navigate = useNavigate();
+  const { signed } = useAuth();
 
   useEffect(() => {
     api.get<IUbs[]>('ubs').then(ubsData => {
@@ -27,6 +31,16 @@ function LandingPage() {
     });
   }, []);
 
+  const handleSearchUbs = (event?: React.MouseEvent<HTMLButtonElement>, option?: IOption) => {
+    if (!signed) return navigate('/login');
+
+    return navigate('/queue', {
+      state: {
+        selectedUbs: option?.value,
+      },
+    });
+  };
+
   return (
     <LandingPageContainer>
       <MedlineHeader />
@@ -37,7 +51,7 @@ function LandingPage() {
             placeholder="Escolha uma unidade de saúde"
             Icon={FaHospitalAlt}
             options={ubs}
-            buttonConfig={{ children: 'Procurar' }}
+            buttonConfig={{ children: 'Procurar', onClick: handleSearchUbs }}
           />
         </DropdownContainer>
 

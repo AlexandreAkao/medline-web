@@ -1,7 +1,6 @@
 import { FaPaperclip, FaRegPaperPlane } from 'react-icons/fa';
 
 import Button from 'components/Button';
-import Checkbox from 'components/Checkbox';
 import MedlineHeader from 'components/Header/MedlineHeader';
 import Switch from 'components/Switch';
 import {
@@ -17,12 +16,13 @@ import {
   RequestFormButtonContainer,
 } from 'pages/RequestPage/styles';
 import FileInput from 'components/FileInput';
+import Radio from 'components/Radio';
 
 function RequestPage() {
   const describeCovid = (
-    <Checkbox id="covid" primary>
+    <Radio id="covid" primary>
       Covid-19
-    </Checkbox>
+    </Radio>
   );
 
   return (

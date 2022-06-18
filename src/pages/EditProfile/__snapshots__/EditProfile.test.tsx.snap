@@ -62,6 +62,7 @@ exports[`EditProfile > should match with snapshot 1`] = `
             class="sc-hKMtZM fIniom"
             data-testid="test-input"
             placeholder="Nome"
+            role="textbox"
             type="text"
             value=""
           />
@@ -83,6 +84,7 @@ exports[`EditProfile > should match with snapshot 1`] = `
             class="sc-hKMtZM fIniom"
             data-testid="test-input"
             placeholder="Email"
+            role="textbox"
             type="text"
             value=""
           />
@@ -104,6 +106,7 @@ exports[`EditProfile > should match with snapshot 1`] = `
             class="sc-hKMtZM fIniom"
             data-testid="test-input"
             placeholder="Senha"
+            role="textbox"
             type="text"
             value=""
           />
@@ -125,6 +128,7 @@ exports[`EditProfile > should match with snapshot 1`] = `
             class="sc-hKMtZM fIniom"
             data-testid="test-input"
             placeholder="Confirmar senha"
+            role="textbox"
             type="text"
             value=""
           />

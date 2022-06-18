@@ -12,6 +12,7 @@ function Dropdown({
   buttonConfig,
   Icon,
   onSelect,
+  value,
 }: IDropdownProps) {
   const [option, setOption] = useState<IOption>();
   const handleOnButtonClick = useCallback(
@@ -36,6 +37,7 @@ function Dropdown({
         styles={customStyleSelect}
         noOptionsMessage={() => noOptionsMessage}
         onChange={handleOnOptionClick}
+        value={value}
       />
       {buttonConfig && <Button {...buttonConfig} onClick={handleOnButtonClick} />}
     </DropdownContainer>
