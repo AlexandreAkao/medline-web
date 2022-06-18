@@ -12,6 +12,7 @@ exports[`TextInput > should match with snapshot 1`] = `
         class="sc-hKMtZM fIniom"
         data-testid="test-input"
         placeholder="any_placeholder"
+        role="textbox"
         type="text"
         value=""
       />

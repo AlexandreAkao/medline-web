@@ -85,6 +85,7 @@ exports[`Login > should match with snapshot 1`] = `
                 class="sc-hKMtZM fIniom"
                 data-testid="test-input"
                 placeholder="Email"
+                role="textbox"
                 type="text"
                 value=""
               />
@@ -120,6 +121,7 @@ exports[`Login > should match with snapshot 1`] = `
                 class="sc-hKMtZM fIniom"
                 data-testid="test-input"
                 placeholder="Senha"
+                role="textbox"
                 type="password"
                 value=""
               />
@@ -148,7 +150,6 @@ exports[`Login > should match with snapshot 1`] = `
             >
               <input
                 class="sc-crXcEl eQIjlf"
-                name=""
                 type="checkbox"
               />
               <label

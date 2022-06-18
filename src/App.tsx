@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import { AuthProvider } from 'providers/AuthProvider';
 import Login from 'pages/Login';
@@ -16,6 +17,8 @@ function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
+        <ToastContainer />
+
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />

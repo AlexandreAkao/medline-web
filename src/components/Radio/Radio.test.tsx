@@ -3,20 +3,20 @@ import { composeStories } from '@storybook/testing-react';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 
-import * as stories from 'components/Checkbox/Checkbox.stories';
-import Checkbox from 'components/Checkbox';
+import * as stories from 'components/Radio/Radio.stories';
+import Radio from 'components/Radio';
 import colors from 'styles/colors';
 
 const { Primary, Secondary } = composeStories(stories);
 
-describe('Checkbox', () => {
-  const renderComponent = (customProps: Partial<ICheckboxProps> = {}) => {
-    const props: ICheckboxProps = {
-      children: 'checkbox-test',
-      id: 'checkbox-test-id',
+describe('Radio', () => {
+  const renderComponent = (customProps: Partial<IRadioProps> = {}) => {
+    const props: IRadioProps = {
+      children: 'radio-test',
+      id: 'radio-test-id',
       ...customProps,
     };
-    return render(<Checkbox {...props} />);
+    return render(<Radio {...props} />);
   };
 
   it('should match with snapshot', () => {
@@ -24,7 +24,7 @@ describe('Checkbox', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render a primary checkbox', () => {
+  it('should render a primary radio button', () => {
     render(<Primary />);
     const labelElement = screen.getByText(/Primary/i);
     expect(labelElement).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe('Checkbox', () => {
     });
   });
 
-  it('should render a secondary checkbox', () => {
+  it('should render a secondary radio button', () => {
     render(<Secondary />);
     const labelElement = screen.getByText(/Secondary/i);
     expect(labelElement).toBeInTheDocument();
@@ -42,23 +42,19 @@ describe('Checkbox', () => {
     });
   });
 
-  it('should trigger function on change checkbox value', async () => {
+  it('should trigger function on change radio value', async () => {
     const onChange = vi.fn();
     renderComponent({ onChange });
 
-    const checkboxElement = screen.getByRole('checkbox');
-    const labelElement = screen.getByText(/checkbox-test/i);
+    const radioElement = screen.getByRole('radio');
+    const labelElement = screen.getByText(/Radio-test/i);
 
     expect(labelElement).toBeInTheDocument();
-    expect(checkboxElement).toBeInTheDocument();
-    expect(checkboxElement).not.toBeChecked();
+    expect(radioElement).toBeInTheDocument();
+    expect(radioElement).not.toBeChecked();
 
-    await userEvent.click(checkboxElement);
-    expect(checkboxElement).toBeChecked();
-    expect(onChange).toBeCalled();
-
-    await userEvent.click(labelElement);
-    expect(checkboxElement).not.toBeChecked();
+    await userEvent.click(radioElement);
+    expect(radioElement).toBeChecked();
     expect(onChange).toBeCalled();
   });
 });

@@ -3,23 +3,23 @@
 exports[`RequestPage > should match with snapshot 1`] = `
 <div>
   <div
-    class="sc-idiyUo cBzIcx"
+    class="sc-fnykZs bwVpRF"
   >
     <header
-      class="sc-jSMfEi jqMBOM"
+      class="sc-dkzDqf WepAw"
       data-testid="test-navigation"
     >
       <img
         alt="Medline logo"
-        class="sc-gKXOVf dpNDyc"
+        class="sc-hKMtZM hOePDa"
         src="/src/assets/images/medline-logo.svg"
       />
       <nav
-        class="sc-iBkjds iOmqAx"
+        class="sc-eCYdqJ dDvGMN"
         data-testid="test-navigation-items"
       >
         <div
-          class="sc-eCYdqJ fOTuBR"
+          class="sc-gsnTZi qZpGk"
         >
           <button
             class="sc-bczRLJ eeLoKZ"
@@ -28,7 +28,7 @@ exports[`RequestPage > should match with snapshot 1`] = `
           </button>
         </div>
         <div
-          class="sc-eCYdqJ fOTuBR"
+          class="sc-gsnTZi qZpGk"
         >
           <a
             href="/login"
@@ -39,37 +39,37 @@ exports[`RequestPage > should match with snapshot 1`] = `
       </nav>
     </header>
     <main
-      class="sc-dIouRR eAQIQf"
+      class="sc-fEOsli ikuTC"
     >
       <span
-        class="sc-hHLeRK fJmOCb"
+        class="sc-bjUoiL kkKFLc"
       >
         Adicionar Texto Explicativo para esta página.Acho uma boa idéia aqui escrevermos textos para auxilixar o usuário nesta tela
       </span>
       <form
-        class="sc-dmRaPn jtdwDf"
+        class="sc-idiyUo cFPylo"
       >
         <h2
-          class="sc-kgflAQ gAmHCo"
+          class="sc-dIouRR bNdxZd"
         >
           Solicitações
         </h2>
         <div
-          class="sc-ksZaOG hJCAUN"
+          class="sc-crXcEl evBWJB"
         >
           <input
-            class="sc-bjUoiL kYgSid"
+            class="sc-hAZoDl bWZkFr"
             data-testid="test-switch"
             id="react-switch-new"
             name="react-switch-new"
             type="checkbox"
           />
           <label
-            class="sc-fEOsli kRpicu"
+            class="sc-ksZaOG btGNZc"
             for="react-switch-new"
           >
             <div
-              class="sc-hAZoDl hEoMPz"
+              class="sc-evZas iEgbiY"
             >
               <span>
                 Atestado
@@ -79,213 +79,201 @@ exports[`RequestPage > should match with snapshot 1`] = `
               </span>
             </div>
             <span
-              class="sc-fnykZs cjucBC"
+              class="sc-breuTD izwwrN"
             />
           </label>
         </div>
         <div
-          class="sc-fLlhyt jQodRf"
+          class="sc-hHLeRK lcjDZw"
         >
           <h3
-            class="sc-bBrHrO gubGXJ"
+            class="sc-dmRaPn bFNPrW"
           >
             Descrição
           </h3>
           <h5
-            class="sc-ivTmOn owMMX"
+            class="sc-kgflAQ iJOupm"
           >
             Selecione uma descrição:
           </h5>
           <div
-            class="sc-cxabCf juKSrL"
+            class="sc-fLlhyt eHrpHJ"
           >
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
               </label>
             </div>
             <div
-              class="sc-hKMtZM eKPDqP"
+              class="sc-iIPllB jlXeEC"
             >
               <input
-                class="sc-gsnTZi WpIQh"
+                class="sc-cxabCf kacQTl"
                 id="covid"
-                name=""
-                type="checkbox"
+                type="radio"
               />
               <label
-                class="sc-dkzDqf ivaGwg"
+                class="sc-llJcti fvvsVG"
                 for="covid"
               >
                 Covid-19
@@ -294,7 +282,7 @@ exports[`RequestPage > should match with snapshot 1`] = `
           </div>
         </div>
         <div
-          class="sc-llJcti kZpa-dj"
+          class="sc-bBrHrO cXOwrI"
         >
           <button
             class="sc-bczRLJ gFHCJq"
@@ -315,7 +303,7 @@ exports[`RequestPage > should match with snapshot 1`] = `
             Anexar
           </button>
           <input
-            class="sc-iIPllB esnyEa"
+            class="sc-ivTmOn fJbLNX"
             data-testid="file-input-test"
             type="file"
           />

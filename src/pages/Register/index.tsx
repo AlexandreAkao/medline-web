@@ -1,5 +1,6 @@
-import { ChangeEvent, useReducer } from 'react';
+import { ChangeEvent, useReducer, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import {
   RegisterContainer,
@@ -18,10 +19,13 @@ import Button from 'components/Button';
 import api from 'service/api';
 import MedlineHeader from 'components/Header/MedlineHeader';
 import { userFormInitialState, userFormReducer } from 'pages/Register/reducer';
+import { useAuth } from 'hooks/useAuth';
 
 function Register() {
   const [userForm, dispatchUserForm] = useReducer(userFormReducer, userFormInitialState);
+  const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
+  const { handleLogin } = useAuth();
 
   const handleGoBack = () => {
     navigate(-1);
@@ -30,8 +34,25 @@ function Register() {
   const handleChangeInput = (type: UserRegisterTypes) => (event: ChangeEvent<HTMLInputElement>) =>
     dispatchUserForm({ payload: event.target.value, type });
 
-  const handleRegisterUserButton = () => {
-    api.post('user', userForm);
+  const handleRegisterUserButton = async () => {
+    if (
+      userForm.password !== confirmPassword ||
+      userForm.password === '' ||
+      confirmPassword === ''
+    ) {
+      toast.error('As senhas precisam ser iguais');
+      return;
+    }
+    const data = await api.post('user', userForm);
+
+    if (data.status === 200) {
+      toast.success('Usuário criado com sucesso!');
+      handleLogin({
+        email: userForm.email,
+        password: userForm.password,
+      });
+      navigate('/');
+    }
   };
 
   return (
@@ -88,12 +109,14 @@ function Register() {
             placeholder="Senha"
             onChange={handleChangeInput('password')}
             value={userForm.password}
+            isPassword
           />
           <TextInput
             label="Confirmar senha"
             placeholder="Confirmar senha"
-            onChange={handleChangeInput('password')}
-            value={userForm.password}
+            onChange={e => setConfirmPassword(e.target.value)}
+            value={confirmPassword}
+            isPassword
           />
 
           <AddressFormSection>

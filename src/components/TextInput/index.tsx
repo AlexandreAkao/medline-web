@@ -45,6 +45,7 @@ function TextInput({
           placeholder={placeholder}
           type={typeInput}
           value={value}
+          role="textbox"
         >
           {(inputProps: Props) => {
             return (

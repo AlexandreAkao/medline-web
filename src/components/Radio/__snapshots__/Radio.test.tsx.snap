@@ -1,21 +1,20 @@
 // Vitest Snapshot v1
 
-exports[`Checkbox > should match with snapshot 1`] = `
+exports[`Radio > should match with snapshot 1`] = `
 <div>
   <div
     class="sc-dkzDqf eMxdaI"
   >
     <input
       class="sc-bczRLJ itSYxX"
-      id="checkbox-test-id"
-      name="checkbox-test-id"
-      type="checkbox"
+      id="radio-test-id"
+      type="radio"
     />
     <label
       class="sc-gsnTZi cTEWgn"
-      for="checkbox-test-id"
+      for="radio-test-id"
     >
-      checkbox-test
+      radio-test
     </label>
   </div>
 </div>

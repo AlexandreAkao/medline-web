@@ -31,7 +31,9 @@ function MedlineHeader() {
   const navigationButtons = useMemo(() => {
     return signed && user ? (
       <>
-        <HeaderItem as="link">Atestados/Receitas</HeaderItem>
+        <HeaderItem as="link" href="/prescription">
+          Atestados/Receitas
+        </HeaderItem>
         <HeaderItem as="link" href="/request">
           Solicitação
         </HeaderItem>
@@ -39,10 +41,10 @@ function MedlineHeader() {
           <OverflowMenu render={<FaRegUser size={20} />}>
             <OverflowMenuTitle>Olá, {user.name}</OverflowMenuTitle>
             <OverflowMenuNavigation>
-              <OverflowMenuNavigationItem>
+              <HeaderItem href="/edit-profile">
                 <FaUserEdit color={colors.grey.normal} fontSize={25} />
                 <span>Editar Perfil</span>
-              </OverflowMenuNavigationItem>
+              </HeaderItem>
               <OverflowMenuNavigationItem onClick={handleLogout}>
                 <MdExitToApp color={colors.grey.normal} fontSize={25} />
                 <span>Sair</span>
@@ -67,7 +69,7 @@ function MedlineHeader() {
     return signed && user ? (
       <HeaderMenuBurgerContainer>
         <HeaderMenuBurgerTitle>Olá, {user.name}</HeaderMenuBurgerTitle>
-        <HeaderItem>
+        <HeaderItem href="/prescription">
           <FaReceipt />
           <span>Atestados/Receitas</span>
         </HeaderItem>
@@ -75,7 +77,7 @@ function MedlineHeader() {
           <FaPlay />
           <span>Solicitação</span>
         </HeaderItem>
-        <HeaderItem>
+        <HeaderItem href="/edit-profile">
           <FaUserEdit />
           <span>Editar perfil</span>
         </HeaderItem>

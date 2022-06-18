@@ -41,6 +41,28 @@ export const OverflowMenuNavigation = styled.nav`
   display: flex;
   flex-direction: column;
   padding: 1.6rem;
+
+  ${HeaderItemContainer} {
+    padding: 1rem;
+    a {
+      padding: 0;
+      color: ${colors.grey.normal};
+      justify-content: flex-start;
+
+      :hover {
+        span {
+          color: ${colors.primary};
+        }
+        svg {
+          fill: ${colors.primary};
+        }
+      }
+
+      span {
+        margin-left: 20px;
+      }
+    }
+  }
 `;
 
 export const OverflowMenuNavigationItem = styled.div`

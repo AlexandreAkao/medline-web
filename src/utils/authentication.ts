@@ -6,4 +6,4 @@ export const getUserInfo = () => {
   return isEmpty(user) ? null : (user as IUser);
 };
 
-export const geToken = () => localStorage.getItem('token');
+export const getToken = () => localStorage.getItem('token');

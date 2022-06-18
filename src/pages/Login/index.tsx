@@ -1,6 +1,7 @@
 import { FaUserAlt, FaLock } from 'react-icons/fa';
 import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import {
   LoginBackground,
@@ -37,6 +38,11 @@ function Login() {
     navigate('/register');
   };
 
+  const handleLoginButton = async () => {
+    await handleLogin({ email, password });
+    toast.success('Login feito com sucesso');
+  };
+
   return (
     <LoginContainer>
       <MedlineHeader />
@@ -70,7 +76,7 @@ function Login() {
             </LoginRemember>
 
             <LoginFormButtons>
-              <Button primary={false} size="large" onClick={() => handleLogin({ email, password })}>
+              <Button primary={false} size="large" onClick={handleLoginButton}>
                 Login
               </Button>
               <Button primary={false} size="large" onClick={handleRegister}>
