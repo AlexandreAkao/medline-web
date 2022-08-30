@@ -27,7 +27,27 @@ api.interceptors.response.use(
     return response;
   },
   (error: AxiosError) => {
-    toast.error(error.message, { autoClose: 3000, theme: 'colored' });
+    if (error.response?.status === 401) {
+      axios
+        .post<IRefreshToken>(
+          'https://securetoken.googleapis.com/v1/token',
+          {
+            grant_type: 'refresh_token',
+            refresh_token: localStorage.getItem('refresh_token') ?? '',
+          },
+          {
+            params: {
+              key: 'AIzaSyDYolHTkT0zuI3X1MNup36eSi2gZ3INa2g',
+            },
+          },
+        )
+        .then(data => {
+          const { access_token: accessToken } = data.data;
+
+          localStorage.setItem('token', accessToken);
+        });
+    } else if (error.response?.status !== 404)
+      toast.error(error.message, { autoClose: 3000, theme: 'colored' });
     return Promise.reject(error);
   },
 );

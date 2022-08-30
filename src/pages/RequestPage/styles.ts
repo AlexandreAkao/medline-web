@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import Button from 'components/Button';
 import colors from 'styles/colors';
 import { ButtonContainer } from 'components/Button/styles';
 

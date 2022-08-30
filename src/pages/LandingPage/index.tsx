@@ -1,6 +1,7 @@
 import { FaHospitalAlt } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import {
   DropdownContainer,
@@ -31,8 +32,8 @@ function LandingPage() {
     });
   }, []);
 
-  const handleSearchUbs = (event?: React.MouseEvent<HTMLButtonElement>, option?: IOption) => {
-    if (!signed) return navigate('/login');
+  const handleSearchUbs = (_event?: React.MouseEvent<HTMLButtonElement>, option?: IOption) => {
+    if (!signed) return toast.info('Usuário precisa estar logado');
 
     return navigate('/queue', {
       state: {
