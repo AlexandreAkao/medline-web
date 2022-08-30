@@ -12,15 +12,16 @@ export function AuthProvider({ children }: IChildren) {
 
   const handleLogin = useCallback(
     async (userData: IUserLogin) => {
-      const userResponse = await api.post('login', userData);
+      const userResponse = await api.post<ILogin>('login', userData);
 
       if (userResponse.status === 200) {
-        const token = userResponse.data.idToken;
-        localStorage.setItem('token', token);
+        const { idToken, refreshToken } = userResponse.data;
+        localStorage.setItem('token', idToken);
+        localStorage.setItem('refresh_token', refreshToken);
 
         const userInfo = await api.get<IUser>('user/info', {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${idToken}`,
           },
         });
 
