@@ -22,7 +22,8 @@ exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
           class="sc-gsnTZi qZpGk"
         >
           <button
-            class="sc-bczRLJ eeLoKZ"
+            class="sc-bczRLJ bJBahq"
+            type="button"
           >
             Cadastro
           </button>
@@ -85,18 +86,21 @@ exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
         class="sc-dmRaPn djFJY"
       >
         <button
-          class="sc-bczRLJ fpIqOv"
+          class="sc-bczRLJ iAUOAI"
+          type="button"
         >
           Voltar
         </button>
         <div>
           <button
-            class="sc-bczRLJ fpIqOv"
+            class="sc-bczRLJ iAUOAI"
+            type="button"
           >
             Negado
           </button>
           <button
-            class="sc-bczRLJ fpIqOv"
+            class="sc-bczRLJ iAUOAI"
+            type="button"
           >
             Enviar
           </button>

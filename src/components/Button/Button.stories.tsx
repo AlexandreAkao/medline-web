@@ -43,3 +43,9 @@ Large.args = {
   size: 'large',
   children: 'Large',
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Disabled',
+  disabled: true,
+};

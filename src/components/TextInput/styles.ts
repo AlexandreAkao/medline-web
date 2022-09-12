@@ -33,7 +33,7 @@ export const TextInputContainer = styled.div`
   svg:first-child {
     border-right: 1px solid ${getColorAlpha(colors.grey.normal, 0.5)};
     padding-right: 10px;
-    color: ${colors.primary};
+    color: ${colors.primary.normal};
   }
 `;
 
@@ -52,7 +52,7 @@ export const TextInputStyled = styled.input`
   }
 
   & + svg {
-    color: ${colors.primary};
+    color: ${colors.primary.normal};
     cursor: pointer;
     padding: 2px;
   }

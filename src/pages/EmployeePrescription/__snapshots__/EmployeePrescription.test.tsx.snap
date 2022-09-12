@@ -22,7 +22,8 @@ exports[`EmployeePrescription > should match with snapshot 1`] = `
           class="sc-eCYdqJ fOTuBR"
         >
           <button
-            class="sc-papXJ eSvoFt"
+            class="sc-papXJ fnEGjm"
+            type="button"
           >
             Cadastro
           </button>

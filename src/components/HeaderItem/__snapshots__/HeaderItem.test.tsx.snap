@@ -6,7 +6,8 @@ exports[`HeaderItem > should match with snapshot 1`] = `
     class="sc-gsnTZi qZpGk"
   >
     <button
-      class="sc-bczRLJ eeLoKZ"
+      class="sc-bczRLJ bJBahq"
+      type="button"
     />
   </div>
 </div>

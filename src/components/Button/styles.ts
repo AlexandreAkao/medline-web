@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import colors from 'styles/colors';
 
-const getButtonSize = (size: ButtonSize) => {
+const getButtonSize = (size: ButtonSize = 'medium') => {
   const sizeMap = {
     small: '0.3125rem 1.25rem',
     medium: '0.625rem 2.5rem',
@@ -11,9 +11,9 @@ const getButtonSize = (size: ButtonSize) => {
   return sizeMap[size];
 };
 
-export const ButtonContainer = styled.button<Required<IButtonProps>>`
+export const ButtonContainer = styled.button<IButtonProps>`
   border: 0;
-  background-color: ${colors.primary};
+  background-color: ${colors.primary.normal};
   padding: ${({ size }) => getButtonSize(size)};
   border-radius: 20px;
   font-size: 1rem;
@@ -26,7 +26,17 @@ export const ButtonContainer = styled.button<Required<IButtonProps>>`
 
   :hover {
     transition: 0.2s ease all;
-    background-color: ${colors.primaryLight};
+    background-color: ${colors.primary.light};
+  }
+
+  :active {
+    transition: 0.2s ease all;
+    background-color: ${colors.primary.darkest};
+  }
+
+  :disabled {
+    background-color: ${colors.primary.darker};
+    cursor: auto;
   }
 
   ${({ primary }) =>
@@ -36,6 +46,14 @@ export const ButtonContainer = styled.button<Required<IButtonProps>>`
       background-color: ${colors.white.normal};
 
       :hover {
+        background-color: ${colors.white.lighter};
+      }
+
+      :active {
+        background-color: ${colors.white.light};
+      }
+
+      :disabled {
         background-color: ${colors.white.lighter};
       }
     `}

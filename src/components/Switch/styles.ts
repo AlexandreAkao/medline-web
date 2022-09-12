@@ -44,7 +44,7 @@ export const SwitchButton = styled.span`
   height: 36px;
   border-radius: 45px;
   transition: 0.2s;
-  background-color: ${colors.primary};
+  background-color: ${colors.primary.normal};
   box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.3);
 `;
 

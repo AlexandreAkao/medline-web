@@ -29,7 +29,7 @@ describe('Button', () => {
     expect(buttonElement).not.toBeNull();
     expect(buttonElement).toHaveStyle({
       color: colors.white.normal,
-      backgroundColor: colors.primary,
+      backgroundColor: colors.primary.normal,
     });
   });
 

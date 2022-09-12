@@ -5,7 +5,7 @@ import { Container } from 'components/TextInput/styles';
 import { ButtonContainer } from 'components/Button/styles';
 
 export const EditProfileContainer = styled.main`
-  background-color: ${colors.primary};
+  background-color: ${colors.primary.normal};
   height: 100%;
   overflow: auto;
 `;

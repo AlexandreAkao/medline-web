@@ -5,7 +5,7 @@ import doctor from 'assets/images/doctor.svg';
 import ScreenSizes from 'styles/screenSizes';
 
 export const LandingPageContainer = styled.div`
-  background-color: ${colors.primary};
+  background-color: ${colors.primary.normal};
   height: 100%;
   background-image: url(${doctor});
   background-repeat: no-repeat;

@@ -5,7 +5,7 @@ import doctors from 'assets/images/doctors-blur.png';
 import { FilePreviewContainer } from 'components/FilePreview/styles';
 
 export const PrescriptionPageContainer = styled.main`
-  background-color: ${colors.primary};
+  background-color: ${colors.primary.normal};
   height: 100%;
   overflow: auto;
   background-image: url(${doctors});

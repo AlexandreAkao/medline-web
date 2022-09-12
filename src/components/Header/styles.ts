@@ -11,7 +11,7 @@ export const Nav = styled.header<Pick<IHeaderProps, 'isAuthenticated'>>`
   box-shadow: ${({ isAuthenticated }) =>
     isAuthenticated ? '0px 4px 10px 1px rgba(0, 0, 0, 0.25);' : null};
   z-index: ${zIndexPriority.VERY_HIGH};
-  background-color: ${colors.primary};
+  background-color: ${colors.primary.normal};
   display: flex;
   align-items: center;
   justify-content: space-between;

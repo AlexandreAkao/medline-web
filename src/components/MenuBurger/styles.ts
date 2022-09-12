@@ -37,7 +37,7 @@ export const MenuBurgerContainer = styled.div`
   }
 
   .bm-menu {
-    background: ${colors.primaryLight};
+    background: ${colors.primary.light};
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
   }
