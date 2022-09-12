@@ -12,11 +12,8 @@ function Switch({ optionLeft, optionRight, onChange }: ISwitchProps) {
   const [isRight, setIsRight] = useState(false);
 
   const handleOnChange = () => {
-    setIsRight(prev => {
-      onChange && onChange(!prev ? optionRight : optionLeft);
-
-      return !prev;
-    });
+    onChange && onChange(!isRight ? optionRight : optionLeft);
+    setIsRight(prev => !prev);
   };
 
   return (

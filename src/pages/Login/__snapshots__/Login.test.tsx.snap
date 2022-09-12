@@ -22,7 +22,8 @@ exports[`Login > should match with snapshot 1`] = `
           class="sc-hAZoDl cJByLp"
         >
           <button
-            class="sc-ksZaOG ioDaHZ"
+            class="sc-ksZaOG iuwGxm"
+            type="button"
           >
             Cadastro
           </button>
@@ -168,12 +169,14 @@ exports[`Login > should match with snapshot 1`] = `
             class="sc-iqcoie dLlhNV"
           >
             <button
-              class="sc-ksZaOG dHWQgM"
+              class="sc-ksZaOG bGwPeO"
+              type="button"
             >
               Login
             </button>
             <button
-              class="sc-ksZaOG dHWQgM"
+              class="sc-ksZaOG bGwPeO"
+              type="button"
             >
               Cadastrar
             </button>

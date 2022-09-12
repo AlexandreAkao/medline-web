@@ -35,7 +35,7 @@ export const EmployeePrescriptionDetailsInformation = styled.main`
 `;
 
 export const EmployeePrescriptionDetailsInformationData = styled.div`
-  background-color: ${colors.primaryLighter};
+  background-color: ${colors.primary.lighter};
   padding: 1rem;
   display: flex;
   align-items: center;

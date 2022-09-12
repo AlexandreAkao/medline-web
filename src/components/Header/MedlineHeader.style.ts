@@ -51,10 +51,10 @@ export const OverflowMenuNavigation = styled.nav`
 
       :hover {
         span {
-          color: ${colors.primary};
+          color: ${colors.primary.normal};
         }
         svg {
-          fill: ${colors.primary};
+          fill: ${colors.primary.normal};
         }
       }
 
@@ -75,10 +75,10 @@ export const OverflowMenuNavigationItem = styled.div`
 
   :hover {
     span {
-      color: ${colors.primary};
+      color: ${colors.primary.normal};
     }
     svg {
-      fill: ${colors.primary};
+      fill: ${colors.primary.normal};
     }
   }
 

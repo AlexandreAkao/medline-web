@@ -6,7 +6,7 @@ import doctors from 'assets/images/doctors.svg';
 import ScreenSizes from 'styles/screenSizes';
 
 export const LoginContainer = styled.div`
-  background-color: ${colors.primary};
+  background-color: ${colors.primary.normal};
   height: 100%;
   overflow: auto;
 `;

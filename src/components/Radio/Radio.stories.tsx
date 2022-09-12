@@ -11,7 +11,7 @@ export default {
     Story => (
       <div
         style={{
-          background: colors.primary,
+          background: colors.primary.normal,
           width: '100%',
           height: '100%',
           padding: 20,

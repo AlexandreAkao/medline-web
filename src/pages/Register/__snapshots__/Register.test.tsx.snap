@@ -22,7 +22,8 @@ exports[`Register > should match with snapshot 1`] = `
           class="sc-evZas gLFSKm"
         >
           <button
-            class="sc-crXcEl CHpSV"
+            class="sc-crXcEl jBoqGq"
+            type="button"
           >
             Cadastro
           </button>
@@ -404,12 +405,14 @@ exports[`Register > should match with snapshot 1`] = `
           class="sc-ftvSup ioFdsF"
         >
           <button
-            class="sc-crXcEl kULOXI"
+            class="sc-crXcEl DbqLC"
+            type="button"
           >
             Voltar
           </button>
           <button
-            class="sc-crXcEl kULOXI"
+            class="sc-crXcEl DbqLC"
+            type="button"
           >
             Cadastrar
           </button>

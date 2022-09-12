@@ -1,11 +1,12 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import FilePreview from 'components/FilePreview';
+import Loader from 'components/Loader';
 import colors from 'styles/colors';
 
 export default {
-  title: 'FilePreview',
-  component: FilePreview,
+  title: 'Loader',
+  args: {},
+  component: Loader,
   decorators: [
     Story => (
       <div
@@ -13,18 +14,15 @@ export default {
           background: colors.primary.normal,
           width: '100%',
           height: '100%',
-          padding: '50px',
         }}
       >
         <Story />
       </div>
     ),
   ],
-} as ComponentMeta<typeof FilePreview>;
+} as ComponentMeta<typeof Loader>;
 
-const Template: ComponentStory<typeof FilePreview> = args => <FilePreview {...args} />;
+const Template: ComponentStory<typeof Loader> = () => <Loader />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  children: 'Primary - Description - 99/99/9999',
-};
+Primary.args = {};

@@ -13,7 +13,7 @@ export const TableContainer = styled.div`
 
     thead {
       tr {
-        background-color: ${colors.primaryLighter};
+        background-color: ${colors.primary.lighter};
       }
     }
 

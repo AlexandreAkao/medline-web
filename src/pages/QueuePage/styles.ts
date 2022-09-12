@@ -6,7 +6,7 @@ import { ButtonContainer } from 'components/Button/styles';
 import { DropdownContainer } from 'components/Dropdown/styles';
 
 export const QueuePageContainer = styled.main`
-  background-color: ${colors.primary};
+  background-color: ${colors.primary.normal};
   height: 100%;
   overflow: auto;
   background-image: url(${doctors});

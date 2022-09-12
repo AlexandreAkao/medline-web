@@ -4,7 +4,7 @@ interface ISwitchContainer {
 
 interface ISwitchOption {
   label: string;
-  value: string;
+  value: string | number;
 }
 
 interface ISwitchProps {

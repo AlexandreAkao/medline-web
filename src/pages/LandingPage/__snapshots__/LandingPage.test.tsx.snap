@@ -22,7 +22,8 @@ exports[`LandingPage > should match with snapshot 1`] = `
           class="sc-iBkjds bOccIY"
         >
           <button
-            class="sc-jSMfEi bRzdms"
+            class="sc-jSMfEi fWVToL"
+            type="button"
           >
             Cadastro
           </button>
@@ -143,7 +144,8 @@ exports[`LandingPage > should match with snapshot 1`] = `
             />
           </div>
           <button
-            class="sc-jSMfEi bRzdms"
+            class="sc-jSMfEi fWVToL"
+            type="button"
           >
             Procurar
           </button>

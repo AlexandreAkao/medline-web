@@ -22,7 +22,8 @@ exports[`EditProfile > should match with snapshot 1`] = `
           class="sc-ftvSup lpdRfb"
         >
           <button
-            class="sc-eCYdqJ fDdwce"
+            class="sc-eCYdqJ fDUTgR"
+            type="button"
           >
             Cadastro
           </button>
@@ -135,7 +136,8 @@ exports[`EditProfile > should match with snapshot 1`] = `
         </div>
       </div>
       <button
-        class="sc-eCYdqJ kYzDoT"
+        class="sc-eCYdqJ cDNOAB"
+        type="button"
       >
         Salvar
       </button>
