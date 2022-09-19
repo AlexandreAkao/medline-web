@@ -1,9 +1,27 @@
 import { screen } from '@testing-library/react';
+import { vi } from 'vitest';
 
 import { renderWithProvider } from 'utils/testWrapper';
 import PrescriptionPage from 'pages/PrescriptionPage';
+import api from 'service/api';
+import { requestMock } from '__tests__/mocks/request.mock';
+import { paginationMock } from '__tests__/mocks/pagination.mock';
+
+vi.mock('components/Pagination', async () => {
+  return {
+    default: () => <div>Pagination</div>,
+  };
+});
 
 describe('PrescriptionPage', () => {
+  beforeEach(() => {
+    vi.spyOn(api, 'get').mockImplementation(() =>
+      Promise.resolve({
+        data: paginationMock([requestMock]),
+      }),
+    );
+  });
+
   const renderComponent = () => {
     return renderWithProvider(<PrescriptionPage />);
   };

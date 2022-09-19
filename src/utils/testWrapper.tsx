@@ -1,8 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { Router } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
-import { MemoryHistory } from 'react-router-dom/node_modules/history';
+import { createMemoryHistory, MemoryHistory } from 'history';
 
 import { AuthProvider } from 'providers/AuthProvider';
 

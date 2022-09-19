@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`Pagination > should match with snapshot 1`] = `
+<div>
+  <div>
+    Pagination
+  </div>
+</div>
+`;

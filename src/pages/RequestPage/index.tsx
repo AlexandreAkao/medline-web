@@ -1,4 +1,4 @@
-import { FormEvent, useReducer, useState } from 'react';
+import { FormEvent, useReducer, useState, useEffect } from 'react';
 import { FaPaperclip, FaRegPaperPlane } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -34,6 +34,10 @@ function RequestPage() {
   const navigate = useNavigate();
 
   const [requestForm, dispatchRequestForm] = useReducer(requestFormReducer, requestFormInitialState);
+
+  useEffect(() => {
+    return () => setIsLoading(false);
+  }, []);
 
   const handleChangeForm = (payload: string | number | File, type: RequestFormTypes) => {
     dispatchRequestForm({ type, payload });

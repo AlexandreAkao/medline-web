@@ -22,4 +22,8 @@ export const FilePreviewActionContainer = styled.div`
   .icon-action {
     margin: 0 0.5rem;
   }
+
+  .download {
+    cursor: pointer;
+  }
 `;

@@ -19,6 +19,7 @@ const colors = {
   grey: {
     normal: '#808080',
     dark: '#3d3d3d',
+    light: '#cccccc',
   },
   blue: {
     normal: '#5041FF',
