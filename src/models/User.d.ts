@@ -42,6 +42,7 @@ interface IUser {
   rg: string;
   crm: string;
   type: string;
+  ubs?: IUbs;
 }
 
 interface IUserLogin {

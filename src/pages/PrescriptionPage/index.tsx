@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import {
   PrescriptionPageContainer,
   PrescriptionPageStatus,
@@ -5,17 +7,54 @@ import {
 } from 'pages/PrescriptionPage/styles';
 import MedlineHeader from 'components/Header/MedlineHeader';
 import FilePreview from 'components/FilePreview';
+import Pagination from 'components/Pagination';
+import api from 'service/api';
 
 function PrescriptionPage() {
+  const [requests, setRequests] = useState<IRequest[]>([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [pagination, setPagination] = useState<Pick<IPagination, 'totalElements' | 'totalPages' | 'size'>>({
+    totalElements: 0,
+    totalPages: 0,
+    size: 0,
+  });
+
+  const mapStatus: Record<RequestStatusType, FilePreviewStatusTypes> = {
+    EM_ESPERA: 'waiting',
+    CONCLUIDO: 'ready',
+    REJEITADO: 'cancel',
+  };
+
+  useEffect(() => {
+    api
+      .get<IPagination<IRequest>>('request', {
+        params: {
+          page: currentPage,
+          size: 5,
+        },
+      })
+      .then(data => {
+        const { content, ...rest } = data.data;
+        setRequests(content);
+        setPagination(rest);
+      });
+  }, [currentPage]);
+
+  const handlePageChange = (item: { selected: number }) => {
+    setCurrentPage(item.selected);
+  };
+
   return (
     <PrescriptionPageContainer>
       <MedlineHeader />
       <PrescriptionPageStatus>
         <PrescriptionPageTitle>Atestados e Receitas</PrescriptionPageTitle>
-
-        <FilePreview status="ready">Teste1</FilePreview>
-        <FilePreview status="cancel">Teste2</FilePreview>
-        <FilePreview status="waiting">Teste3</FilePreview>
+        {requests.map(request => (
+          <FilePreview key={request.id} status={mapStatus[request.status]} file={request.attachment}>
+            {request.type} - {request.description} - {new Date(request.createdAt).toLocaleDateString('pt-BR')}
+          </FilePreview>
+        ))}
+        <Pagination pageCount={pagination.totalPages} onPageChange={handlePageChange} />
       </PrescriptionPageStatus>
     </PrescriptionPageContainer>
   );
