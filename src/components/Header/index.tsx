@@ -6,12 +6,7 @@ import MedlineLogo from 'assets/images/medline-logo.svg';
 import ScreenSizes from 'styles/screenSizes';
 import MenuBurger from 'components/MenuBurger';
 
-function Header({
-  icon = MedlineLogo,
-  iconAlt = 'Medline Logo',
-  isAuthenticated,
-  children,
-}: IHeaderProps) {
+function Header({ icon = MedlineLogo, iconAlt = 'Medline Logo', isAuthenticated, children }: IHeaderProps) {
   const isTablet = useMediaQuery({ query: `(max-width: ${ScreenSizes.medium})` });
   const navigate = useNavigate();
 

@@ -8,8 +8,7 @@ import ScreenSizes from 'styles/screenSizes';
 export const Nav = styled.header<Pick<IHeaderProps, 'isAuthenticated'>>`
   width: 100%;
   height: 80px;
-  box-shadow: ${({ isAuthenticated }) =>
-    isAuthenticated ? '0px 4px 10px 1px rgba(0, 0, 0, 0.25);' : null};
+  box-shadow: ${({ isAuthenticated }) => (isAuthenticated ? '0px 4px 10px 1px rgba(0, 0, 0, 0.25);' : null)};
   z-index: ${zIndexPriority.VERY_HIGH};
   background-color: ${colors.primary.normal};
   display: flex;

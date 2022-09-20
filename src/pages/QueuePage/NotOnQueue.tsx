@@ -4,11 +4,7 @@ import { FaHospitalAlt } from 'react-icons/fa';
 import api from 'service/api';
 import Button from 'components/Button';
 import Dropdown from 'components/Dropdown';
-import {
-  QueuePageButtonsContainer,
-  QueuePageInfoContainer,
-  QueuePageSection,
-} from 'pages/QueuePage/styles';
+import { QueuePageButtonsContainer, QueuePageInfoContainer, QueuePageSection } from 'pages/QueuePage/styles';
 
 function NotOnQueue({ selectedUbsId, updateQueue }: INotOnQueueProps) {
   const [ubs, setUbs] = useState<IUbsOptions[]>([]);

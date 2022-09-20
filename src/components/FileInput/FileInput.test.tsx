@@ -6,8 +6,7 @@ import { vi } from 'vitest';
 import * as stories from 'components/FileInput/FileInput.stories';
 import FileInput from 'components/FileInput';
 
-const { AllFiles, MultipleFile, OnlyImage, OnlyAudio, OnlyVideo, OnlyDoc } =
-  composeStories(stories);
+const { AllFiles, MultipleFile, OnlyImage, OnlyAudio, OnlyVideo, OnlyDoc } = composeStories(stories);
 
 describe('FileInput', () => {
   const renderComponent = (customProps: Partial<IFileInputProps> = {}) => {
@@ -127,11 +126,7 @@ describe('FileInput', () => {
     render(<OnlyDoc multiple />);
     const buttonElement = screen.getByText(/OnlyDoc/i);
     const inputFileElement = screen.getByTestId('file-input-test') as HTMLInputElement;
-    const filesNotAccepted = [
-      makeFakeFile(),
-      makeFakeFile('audio', 'audio/mpeg'),
-      makeFakeFile('video', 'video/mpeg'),
-    ];
+    const filesNotAccepted = [makeFakeFile(), makeFakeFile('audio', 'audio/mpeg'), makeFakeFile('video', 'video/mpeg')];
     const filesAccepted = [
       makeFakeFile('doc', 'application/*'),
       makeFakeFile('doc', 'application/*'),

@@ -35,11 +35,7 @@ function Register() {
     dispatchUserForm({ payload: event.target.value, type });
 
   const handleRegisterUserButton = async () => {
-    if (
-      userForm.password !== confirmPassword ||
-      userForm.password === '' ||
-      confirmPassword === ''
-    ) {
+    if (userForm.password !== confirmPassword || userForm.password === '' || confirmPassword === '') {
       toast.error('As senhas precisam ser iguais');
       return;
     }
@@ -98,12 +94,7 @@ function Register() {
               value={userForm.rg}
             />
           </RegisterFormRow>
-          <TextInput
-            label="Email"
-            placeholder="Email"
-            onChange={handleChangeInput('email')}
-            value={userForm.email}
-          />
+          <TextInput label="Email" placeholder="Email" onChange={handleChangeInput('email')} value={userForm.email} />
           <TextInput
             label="Senha"
             placeholder="Senha"

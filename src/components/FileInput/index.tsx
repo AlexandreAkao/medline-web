@@ -3,14 +3,7 @@ import { ChangeEvent, useRef } from 'react';
 import Button from 'components/Button';
 import { FileInputContainer } from 'components/FileInput/styles';
 
-function FileInput({
-  children,
-  acceptFile,
-  multiple,
-  onChange,
-  size = 'medium',
-  primary = true,
-}: IFileInputProps) {
+function FileInput({ children, acceptFile, multiple, onChange, size = 'medium', primary = true }: IFileInputProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const onUploadFile = () => {

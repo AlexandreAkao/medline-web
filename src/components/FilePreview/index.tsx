@@ -2,11 +2,7 @@ import { HiDownload, HiCheck, HiDocumentSearch, HiX } from 'react-icons/hi';
 import { FaHourglassHalf } from 'react-icons/fa';
 import { useMemo } from 'react';
 
-import {
-  FilePreviewActionContainer,
-  FilePreviewContainer,
-  FilePreviewInfo,
-} from 'components/FilePreview/styles';
+import { FilePreviewActionContainer, FilePreviewContainer, FilePreviewInfo } from 'components/FilePreview/styles';
 
 function FilePreview({ children, status }: IFilePreviewProps) {
   const IconStatus = useMemo(() => {

@@ -1,12 +1,6 @@
 import { useState } from 'react';
 
-import {
-  SwitchButton,
-  SwitchContainer,
-  SwitchInput,
-  SwitchLabel,
-  SwitchOption,
-} from 'components/Switch/styles';
+import { SwitchButton, SwitchContainer, SwitchInput, SwitchLabel, SwitchOption } from 'components/Switch/styles';
 
 function Switch({ optionLeft, optionRight, onChange }: ISwitchProps) {
   const [isRight, setIsRight] = useState(false);

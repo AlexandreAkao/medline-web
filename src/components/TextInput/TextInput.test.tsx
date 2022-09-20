@@ -6,8 +6,7 @@ import { vi } from 'vitest';
 import * as stories from 'components/TextInput/TextInput.stories';
 import TextInput from 'components/TextInput';
 
-const { WithIcon, WithoutIcon, WithLabel, MaxLength, Password, Date, Cpf } =
-  composeStories(stories);
+const { WithIcon, WithoutIcon, WithLabel, MaxLength, Password, Date, Cpf } = composeStories(stories);
 
 describe('TextInput', () => {
   const renderComponent = (customProps: Partial<ITextInputProps> = {}) => {

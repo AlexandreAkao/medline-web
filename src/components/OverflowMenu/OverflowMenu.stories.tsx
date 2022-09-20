@@ -19,9 +19,9 @@ Primary.args = {
       <h1>Title</h1>
       <span>Option 1</span>
       <span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perferendis ipsum voluptates non
-        nisi nihil accusantium, amet cupiditate molestiae qui aliquid dolores, numquam eligendi!
-        Commodi recusandae impedit accusamus labore dolor.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perferendis ipsum voluptates non nisi nihil
+        accusantium, amet cupiditate molestiae qui aliquid dolores, numquam eligendi! Commodi recusandae impedit
+        accusamus labore dolor.
       </span>
     </div>
   ),

@@ -2,12 +2,7 @@ import { useState, useMemo } from 'react';
 import InputMask, { Props } from 'react-input-mask';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
-import {
-  Container,
-  LabelTitle,
-  TextInputContainer,
-  TextInputStyled,
-} from 'components/TextInput/styles';
+import { Container, LabelTitle, TextInputContainer, TextInputStyled } from 'components/TextInput/styles';
 import { Mask } from 'utils/mask';
 
 function TextInput({
@@ -22,10 +17,7 @@ function TextInput({
   ...rest
 }: ITextInputProps) {
   const [showPassword, setShowPassword] = useState(false);
-  const typeInput = useMemo(
-    () => (isPassword && !showPassword ? 'password' : 'text'),
-    [isPassword, showPassword],
-  );
+  const typeInput = useMemo(() => (isPassword && !showPassword ? 'password' : 'text'), [isPassword, showPassword]);
 
   const toggleShowPassword = () => {
     setShowPassword(prev => !prev);
@@ -59,9 +51,7 @@ function TextInput({
             );
           }}
         </InputMask>
-        {isPassword && (
-          <EyeIcon data-testid="test-eye-icon" role="img" size={26} onClick={toggleShowPassword} />
-        )}
+        {isPassword && <EyeIcon data-testid="test-eye-icon" role="img" size={26} onClick={toggleShowPassword} />}
       </TextInputContainer>
     </Container>
   );

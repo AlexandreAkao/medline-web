@@ -1,8 +1,4 @@
-import {
-  EditProfileContainer,
-  EditProfileSection,
-  EditProfileTitle,
-} from 'pages/EditProfile/styles';
+import { EditProfileContainer, EditProfileSection, EditProfileTitle } from 'pages/EditProfile/styles';
 import MedlineHeader from 'components/Header/MedlineHeader';
 import TextInput from 'components/TextInput';
 import Button from 'components/Button';

@@ -4,13 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from 'components/Button';
 import { HeaderItemContainer } from 'components/HeaderItem/styles';
 
-function HeaderItem({
-  as = 'link',
-  children,
-  href = '',
-  onClick,
-  ...buttonProps
-}: IHeaderItemProps) {
+function HeaderItem({ as = 'link', children, href = '', onClick, ...buttonProps }: IHeaderItemProps) {
   const Item = useMemo(() => {
     const itemsMap = {
       button: (

@@ -33,10 +33,7 @@ function RequestPage() {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const [requestForm, dispatchRequestForm] = useReducer(
-    requestFormReducer,
-    requestFormInitialState,
-  );
+  const [requestForm, dispatchRequestForm] = useReducer(requestFormReducer, requestFormInitialState);
 
   const handleChangeForm = (payload: string | number | File, type: RequestFormTypes) => {
     dispatchRequestForm({ type, payload });
