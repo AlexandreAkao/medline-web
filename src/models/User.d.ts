@@ -17,6 +17,12 @@ interface IUserRegister {
   address: IUserRegisterAddress;
 }
 
+interface IEditUserRegister {
+  name: string;
+  password: string;
+  email: string;
+}
+
 interface IUserAddress {
   id: number;
   createdAt: string;

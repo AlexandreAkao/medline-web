@@ -89,11 +89,6 @@
   "engines": {
     "node": "16.x"
   },
-  "resolutions": {
-    "react": "^17.0.2",
-    "@types/react": "17.0.33",
-    "react-dom": "^17.0.2"
-  },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "npm run lint:fix",
