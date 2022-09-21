@@ -3,4 +3,5 @@ interface IAuthContext {
   user: IUser | null;
   handleLogin: (userData: IUserLogin) => Promise<void>;
   handleLogout: () => void;
+  saveUserInfo: (user: IUser) => void;
 }

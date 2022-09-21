@@ -10,6 +10,12 @@ export function AuthProvider({ children }: IChildren) {
   const [signed, setSigned] = useState(false);
   const [user, setUser] = useState<IUser | null>(null);
 
+  const saveUserInfo = (userInfo: IUser) => {
+    localStorage.setItem('user', JSON.stringify(userInfo));
+    setUser(userInfo);
+    setSigned(true);
+  };
+
   const handleLogin = useCallback(
     async (userData: IUserLogin) => {
       const userResponse = await api.post<ILogin>('login', userData);
@@ -26,9 +32,7 @@ export function AuthProvider({ children }: IChildren) {
         });
 
         if (userInfo.status === 200) {
-          localStorage.setItem('user', JSON.stringify(userInfo.data));
-          setUser(userInfo.data);
-          setSigned(true);
+          saveUserInfo(userInfo.data);
           navigate('/');
         }
       }
@@ -58,6 +62,7 @@ export function AuthProvider({ children }: IChildren) {
       user,
       handleLogin,
       handleLogout,
+      saveUserInfo,
     }),
     [handleLogin, handleLogout, signed, user],
   );

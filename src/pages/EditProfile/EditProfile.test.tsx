@@ -1,9 +1,20 @@
 import { screen } from '@testing-library/react';
+import { vi } from 'vitest';
 
 import { renderWithProvider } from 'utils/testWrapper';
 import EditProfile from 'pages/EditProfile';
+import api from 'service/api';
+import { userMock } from '__tests__/mocks/user.mock';
 
 describe('EditProfile', () => {
+  beforeEach(() => {
+    vi.spyOn(api, 'get').mockImplementation(() =>
+      Promise.resolve({
+        data: userMock,
+      }),
+    );
+  });
+
   const renderComponent = () => {
     return renderWithProvider(<EditProfile />);
   };
