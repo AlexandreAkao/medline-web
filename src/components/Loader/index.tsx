@@ -1,6 +1,10 @@
 import { LoaderContainer, LoaderSpin } from 'components/Loader/styles';
 
-function Loader() {
+function Loader({ isVisible }: ILoaderProps) {
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <LoaderContainer>
       <LoaderSpin />

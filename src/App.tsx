@@ -12,24 +12,31 @@ import PrescriptionPage from 'pages/PrescriptionPage';
 import EmployeePatienteCare from 'pages/EmployeePatienteCare';
 import EmployeePrescription from 'pages/EmployeePrescription';
 import EmployeePrescriptionDetails from 'pages/EmployeePrescriptionDetails';
+import Loader from 'components/Loader';
+import { useLoader } from 'hooks/useLoader';
 
 function App() {
+  const { isLoading } = useLoader();
+
   return (
     <BrowserRouter>
       <AuthProvider>
         <ToastContainer />
+        <Loader isVisible={isLoading} />
 
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/queue" element={<QueuePage />} />
-          <Route path="/request" element={<RequestPage />} />
-          <Route path="/edit-profile" element={<EditProfile />} />
-          <Route path="/prescription" element={<PrescriptionPage />} />
-          <Route path="/employee/patiente-care" element={<EmployeePatienteCare />} />
-          <Route path="/employee/prescription" element={<EmployeePrescription />} />
-          <Route path="/employee/prescription-details" element={<EmployeePrescriptionDetails />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="queue" element={<QueuePage />} />
+          <Route path="request" element={<RequestPage />} />
+          <Route path="edit-profile" element={<EditProfile />} />
+          <Route path="prescription" element={<PrescriptionPage />} />
+          <Route path="employee">
+            <Route path="patiente-care" element={<EmployeePatienteCare />} />
+            <Route path="prescription" element={<EmployeePrescription />} />
+            <Route path="prescription-details" element={<EmployeePrescriptionDetails />} />
+          </Route>
         </Routes>
       </AuthProvider>
     </BrowserRouter>

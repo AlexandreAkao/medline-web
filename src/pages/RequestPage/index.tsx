@@ -1,4 +1,4 @@
-import { FormEvent, useReducer, useState, useEffect } from 'react';
+import { FormEvent, useReducer, useEffect } from 'react';
 import { FaPaperclip, FaRegPaperPlane } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -27,17 +27,16 @@ import { REQUEST_OPTIONS } from 'pages/RequestPage/constants';
 import { isFormValid } from './validation';
 import api from 'service/api';
 import colors from 'styles/colors';
-import Loader from 'components/Loader';
+import { useLoader } from 'hooks/useLoader';
 
 function RequestPage() {
-  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-
+  const { isLoading, setIsLoading } = useLoader();
   const [requestForm, dispatchRequestForm] = useReducer(requestFormReducer, requestFormInitialState);
 
   useEffect(() => {
     return () => setIsLoading(false);
-  }, []);
+  });
 
   const handleChangeForm = (payload: string | number | File, type: RequestFormTypes) => {
     dispatchRequestForm({ type, payload });
@@ -71,7 +70,6 @@ function RequestPage() {
 
   return (
     <RequestContainer>
-      {isLoading && <Loader />}
       <MedlineHeader />
       <RequestForm onSubmit={handleSubmitRequest}>
         <RequestFieldsContainer>

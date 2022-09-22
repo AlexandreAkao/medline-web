@@ -4,4 +4,5 @@ interface IAuthContext {
   handleLogin: (userData: IUserLogin) => Promise<void>;
   handleLogout: () => void;
   saveUserInfo: (user: IUser) => void;
+  isEmployee: boolean | null;
 }

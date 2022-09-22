@@ -4,9 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import AuthContext from 'contexts/AuthContext';
 import { getUserInfo } from 'utils/authentication';
 import api from 'service/api';
+import { useLoader } from 'hooks/useLoader';
 
 export function AuthProvider({ children }: IChildren) {
   const navigate = useNavigate();
+  const { setIsLoading } = useLoader();
   const [signed, setSigned] = useState(false);
   const [user, setUser] = useState<IUser | null>(null);
 
@@ -18,26 +20,31 @@ export function AuthProvider({ children }: IChildren) {
 
   const handleLogin = useCallback(
     async (userData: IUserLogin) => {
-      const userResponse = await api.post<ILogin>('login', userData);
+      try {
+        setIsLoading(true);
+        const userResponse = await api.post<ILogin>('login', userData);
 
-      if (userResponse.status === 200) {
-        const { idToken, refreshToken } = userResponse.data;
-        localStorage.setItem('token', idToken);
-        localStorage.setItem('refresh_token', refreshToken);
+        if (userResponse.status === 200) {
+          const { idToken, refreshToken } = userResponse.data;
+          localStorage.setItem('token', idToken);
+          localStorage.setItem('refresh_token', refreshToken);
 
-        const userInfo = await api.get<IUser>('user/info', {
-          headers: {
-            Authorization: `Bearer ${idToken}`,
-          },
-        });
+          const userInfo = await api.get<IUser>('user/info', {
+            headers: {
+              Authorization: `Bearer ${idToken}`,
+            },
+          });
 
-        if (userInfo.status === 200) {
-          saveUserInfo(userInfo.data);
-          navigate('/');
+          if (userInfo.status === 200) {
+            saveUserInfo(userInfo.data);
+            navigate('/');
+          }
         }
+      } finally {
+        setIsLoading(false);
       }
     },
-    [navigate],
+    [navigate, setIsLoading],
   );
 
   const handleLogout = useCallback(() => {
@@ -45,7 +52,16 @@ export function AuthProvider({ children }: IChildren) {
     setUser(null);
     localStorage.removeItem('user');
     localStorage.removeItem('token');
-  }, []);
+    navigate('/');
+  }, [navigate]);
+
+  const isEmployee = useMemo(() => {
+    if (user?.crm) return true;
+
+    if (user?.crm === undefined) return null;
+
+    return false;
+  }, [user?.crm]);
 
   useEffect(() => {
     const userLocalStorage = getUserInfo();
@@ -63,8 +79,9 @@ export function AuthProvider({ children }: IChildren) {
       handleLogin,
       handleLogout,
       saveUserInfo,
+      isEmployee,
     }),
-    [handleLogin, handleLogout, signed, user],
+    [handleLogin, handleLogout, isEmployee, signed, user],
   );
 
   return <AuthContext.Provider value={authContextValue}>{children}</AuthContext.Provider>;

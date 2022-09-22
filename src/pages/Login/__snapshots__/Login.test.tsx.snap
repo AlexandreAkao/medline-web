@@ -48,7 +48,7 @@ exports[`Login > should match with snapshot 1`] = `
       <div
         class="sc-ftvSup byVrQV"
       >
-        <div
+        <form
           class="sc-papXJ hBdJDP"
         >
           <h1
@@ -170,7 +170,7 @@ exports[`Login > should match with snapshot 1`] = `
           >
             <button
               class="sc-ksZaOG bGwPeO"
-              type="button"
+              type="submit"
             >
               Login
             </button>
@@ -181,7 +181,7 @@ exports[`Login > should match with snapshot 1`] = `
               Cadastrar
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

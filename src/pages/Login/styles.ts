@@ -53,7 +53,7 @@ export const LoginFormContainer = styled.div`
   }
 `;
 
-export const LoginFormLogin = styled.div`
+export const LoginFormLogin = styled.form`
   width: 100%;
 
   ${TextInputContainer} {

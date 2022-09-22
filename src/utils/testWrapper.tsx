@@ -4,6 +4,7 @@ import { Router } from 'react-router-dom';
 import { createMemoryHistory, MemoryHistory } from 'history';
 
 import { AuthProvider } from 'providers/AuthProvider';
+import { LoaderProvider } from 'providers/LoaderProvider';
 
 export function RouterProviders({
   children,
@@ -38,7 +39,9 @@ export const renderWithProvider = (
   return {
     ...render(
       <Router location={history.location} navigator={history}>
-        <AuthProvider>{component}</AuthProvider>,
+        <LoaderProvider>
+          <AuthProvider>{component}</AuthProvider>,
+        </LoaderProvider>
       </Router>,
     ),
     history,

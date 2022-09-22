@@ -20,10 +20,10 @@ function OnQueue({ queueInfo, updateQueue }: IOnQueueProps) {
   };
 
   useEffect(() => {
-    api.get<IUbs>(`ubs/${queueInfo.id}`).then(ubsData => {
+    api.get<IUbs>(`ubs/${queueInfo.ubsId}`).then(ubsData => {
       setUbs(ubsData.data);
     });
-  }, [queueInfo.id]);
+  }, [queueInfo.ubsId]);
 
   return (
     <QueuePageSection>
@@ -31,7 +31,7 @@ function OnQueue({ queueInfo, updateQueue }: IOnQueueProps) {
         <FaHospitalAlt color={colors.grey.normal} />
         <span>{ubs?.name}</span>
       </QueuePageOnQueueTitle>
-      <QueuePageInfoContainer>Lugar na file: {queueInfo.queue_position}</QueuePageInfoContainer>
+      <QueuePageInfoContainer>Lugar na fila: {queueInfo.queue_position}</QueuePageInfoContainer>
       <QueuePageInfoContainer>
         Hora estimada de atendimento: {queueInfo.early_t} - {queueInfo.late_t}
       </QueuePageInfoContainer>

@@ -3,10 +3,13 @@ import { renderHook } from '@testing-library/react-hooks';
 import { AuthProvider } from 'providers/AuthProvider';
 import { useAuth } from 'hooks/useAuth';
 import { RouterProviders } from 'utils/testWrapper';
+import { LoaderProvider } from 'providers/LoaderProvider';
 
 const createWrapper = ({ children }: IChildren) => (
   <RouterProviders>
-    <AuthProvider>{children}</AuthProvider>
+    <LoaderProvider>
+      <AuthProvider>{children}</AuthProvider>
+    </LoaderProvider>
   </RouterProviders>
 );
 
@@ -24,7 +27,7 @@ describe('useAuth', () => {
   it('should render successfully when wrapper a AuthProvider', () => {
     const { result } = renderCustomHook();
     expect(Object.keys(result.current)).toEqual(
-      expect.arrayContaining(['handleLogin', 'handleLogout', 'user', 'signed']),
+      expect.arrayContaining(['handleLogin', 'handleLogout', 'user', 'signed', 'saveUserInfo', 'isEmployee']),
     );
     expect(result.error).toBeUndefined();
   });

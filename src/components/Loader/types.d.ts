@@ -1,0 +1,3 @@
+interface ILoaderProps {
+  isVisible: boolean;
+}
