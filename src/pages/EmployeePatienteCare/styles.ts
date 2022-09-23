@@ -21,6 +21,10 @@ export const EmployeePatienteCareMain = styled.div`
 
   ${TableContainer} {
     width: 100%;
+
+    svg {
+      cursor: pointer;
+    }
   }
 `;
 
@@ -28,4 +32,13 @@ export const EmployeePatienteCareTitle = styled.h1`
   font-size: 2.125rem;
   font-weight: 500;
   margin-bottom: 2rem;
+`;
+
+export const EmployeePatienteCareModalContainer = styled.div`
+  padding: 1.5rem;
+  width: 70vw;
+
+  > h2 {
+    margin-bottom: 2rem;
+  }
 `;

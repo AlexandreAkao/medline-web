@@ -1,6 +1,6 @@
 interface IOption {
   label: string;
-  value: string;
+  value: string | number;
 }
 
 interface IButtonConfig extends IButtonProps {

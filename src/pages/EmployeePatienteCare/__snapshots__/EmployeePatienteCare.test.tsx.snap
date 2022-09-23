@@ -40,7 +40,7 @@ exports[`EmployeePatienteCare > should match with snapshot 1`] = `
       </nav>
     </header>
     <div
-      class="sc-breuTD brCGDt"
+      class="sc-breuTD leQAZN"
     >
       <h1
         class="sc-ksZaOG fvoegn"
@@ -48,7 +48,7 @@ exports[`EmployeePatienteCare > should match with snapshot 1`] = `
         Atendimento
       </h1>
       <div
-        class="sc-crXcEl kfoSoy"
+        class="sc-crXcEl fGbdKS"
       >
         <table
           role="table"

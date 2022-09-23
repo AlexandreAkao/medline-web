@@ -1,12 +1,13 @@
+import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Loader from 'components/Loader';
+import Modal from 'components/Modal';
 import colors from 'styles/colors';
 
 export default {
-  title: 'Loader',
+  title: 'Modal',
   args: {},
-  component: Loader,
+  component: Modal,
   decorators: [
     Story => (
       <div
@@ -20,11 +21,15 @@ export default {
       </div>
     ),
   ],
-} as ComponentMeta<typeof Loader>;
+} as ComponentMeta<typeof Modal>;
 
-const Template: ComponentStory<typeof Loader> = args => <Loader {...args} />;
+const Template: ComponentStory<typeof Modal> = args => <Modal {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
   isVisible: true,
+  customStyles: {},
+  onOpen: action('Open'),
+  onClose: action('Close'),
+  children: <div>Any children</div>,
 };

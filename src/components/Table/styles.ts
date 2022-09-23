@@ -43,7 +43,12 @@ export const TableContainer = styled.div`
 
       :last-child {
         border-right: 0;
+        text-align: center;
       }
+    }
+
+    th {
+      padding: 1rem;
     }
   }
 `;

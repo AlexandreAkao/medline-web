@@ -3,7 +3,7 @@
 exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
 <div>
   <div
-    class="sc-hAZoDl dERzXv"
+    class="sc-fnykZs bHDYOE"
   >
     <header
       class="sc-dkzDqf WepAw"
@@ -40,7 +40,7 @@ exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
       </nav>
     </header>
     <div
-      class="sc-fnykZs bAYsYk"
+      class="sc-fEOsli ddvlil"
     >
       <h1
         class="sc-ksZaOG fvoegn"
@@ -48,10 +48,10 @@ exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
         Atestados e Receitas
       </h1>
       <main
-        class="sc-bjUoiL cgFIRp"
+        class="sc-idiyUo rrOrh"
       >
         <div
-          class="sc-idiyUo bsnWRQ"
+          class="sc-dIouRR gRYweg"
         >
           <span>
             Gilson Bezerra
@@ -67,7 +67,7 @@ exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
           </span>
         </div>
         <div
-          class="sc-dIouRR TPyNd"
+          class="sc-hHLeRK kwKmCy"
         >
           <h1>
             Descrição
@@ -78,12 +78,12 @@ exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
         </div>
       </main>
       <button
-        class="sc-hHLeRK hgoXaG"
+        class="sc-dmRaPn vVEyK"
       >
         Baixar documento
       </button>
       <div
-        class="sc-dmRaPn djFJY"
+        class="sc-kgflAQ hqseha"
       >
         <button
           class="sc-bczRLJ iAUOAI"

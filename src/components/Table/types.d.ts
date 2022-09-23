@@ -2,7 +2,7 @@ interface IColumn {
   Header: string;
   accessor: string;
   columns?: IColumn[];
-  Cell?: (props: import('react-table').UseTableCellProps<unknown>) => React.ReactNode;
+  Cell?: (props: import('react-table').UseTableCellProps<any>) => React.ReactNode;
 }
 
 interface IData {
