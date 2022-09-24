@@ -35,7 +35,7 @@ function App() {
           <Route path="employee">
             <Route path="patiente-care" element={<EmployeePatienteCare />} />
             <Route path="prescription" element={<EmployeePrescription />} />
-            <Route path="prescription-details" element={<EmployeePrescriptionDetails />} />
+            <Route path="prescription-details/:id" element={<EmployeePrescriptionDetails />} />
           </Route>
         </Routes>
       </AuthProvider>
