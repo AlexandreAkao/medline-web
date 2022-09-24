@@ -1,6 +1,5 @@
-import axios from 'axios';
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import Button from 'components/Button';
 import MedlineHeader from 'components/Header/MedlineHeader';
@@ -13,67 +12,108 @@ import {
   EmployeePrescriptionDetailsInformationDescription,
   EmployeePrescriptionDetailsMain,
   EmployeePrescriptionDetailsVizualizer,
+  EmployeePrescriptionNotFoundContainer,
 } from 'pages/EmployeePrescriptionDetails/styles';
 import api from 'service/api';
+import { downloadFile } from 'utils/file';
+import { UpdateRequestEnum } from 'pages/EmployeePrescriptionDetails/types';
+import { useLoader } from 'hooks/useLoader';
 
 function EmployeePrescriptionDetails() {
+  const [request, setRequest] = useState<IRequest>();
+  const [prescriptionFound, setPrescriptionFound] = useState<boolean>(true);
   const navigate = useNavigate();
+  const location = useParams<{ id: string }>();
+  const { setIsLoading } = useLoader();
 
-  const downloadFile = async () => {
-    const file = await api.get('file/3', {
-      responseType: 'blob',
-      headers: {
-        Authorization:
-          'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFhZWY1NjlmNTI0MTRlOWY0YTcxMDRiNmQwNzFmMDY2ZGZlZWQ2NzciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWVkbGluZS1hdXRoIiwiYXVkIjoibWVkbGluZS1hdXRoIiwiYXV0aF90aW1lIjoxNjU1NDE1MDg5LCJ1c2VyX2lkIjoiRUtMQThuTGhtZlpPckhYV2VmdkRvemVHMFF5MiIsInN1YiI6IkVLTEE4bkxobWZaT3JIWFdlZnZEb3plRzBReTIiLCJpYXQiOjE2NTU0MTUwODksImV4cCI6MTY1NTQxODY4OSwiZW1haWwiOiJmdW5jaW9uYXJpb0BtZWRsaW5lLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJmdW5jaW9uYXJpb0BtZWRsaW5lLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ikdKPc6zmAP7dBd10kQTGNzpEQjQVooJra-9EtK-5lxGO_cFkkPCezMfW5cEggDvjfbgbgpR4cyViAp98xMsjhCX3qYjq86bieDzY043FwN5RT5Lt1UiMysFaN6FjXfR9rZLKPeTChBdiY-5xA11MC42CJfvHzajoyy4PUbEsEvrZxzD4w9h3G1Z06A6xcEp9bnBPjpmi6ROlS80H798Jy669I10Oy1mYaUmIh4f1o-sJOTUq7DRZKE9pLzhy8v3J1QavFZOQ0kCnbxWZH3Y9CA0mf-1c7IvYS1DVEXgJPangJchv0s0JVWgmna4_IeOIxQFwzna89gG7DKNPB31AA',
-      },
-    });
-    const filename = file.headers['content-disposition'].split('filename=')[1];
-    const url = window.URL.createObjectURL(file.data);
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', filename);
-    document.body.appendChild(link);
-    link.click();
+  const handleDownloadFile = async () => {
+    const data = await api.get(`file/${request?.attachment.id}`, { responseType: 'blob' });
+    downloadFile(data.data, request?.attachment.name ?? '');
   };
 
   const handleGoBack = () => {
     navigate(-1);
   };
 
+  const updateRequest = (status: UpdateRequestEnum) => async () => {
+    try {
+      setIsLoading(true);
+      const data = await api.put(`request/${location.id}`, {
+        status,
+      });
+
+      if (data.status === 200) {
+        setIsLoading(false);
+        navigate('/employee/prescription');
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    api
+      .get<IRequest>(`request/${location.id}`)
+      .then(data => {
+        setRequest(data.data);
+      })
+      .catch(() => {
+        setPrescriptionFound(false);
+      });
+  }, [location.id]);
+
   return (
     <EmployeePrescriptionDetailsContainer>
       <MedlineHeader />
-      <EmployeePrescriptionDetailsMain>
-        <EmployeePatienteCareTitle>Atestados e Receitas</EmployeePatienteCareTitle>
+      {prescriptionFound ? (
+        <EmployeePrescriptionDetailsMain>
+          <EmployeePatienteCareTitle>Atestados e Receitas</EmployeePatienteCareTitle>
 
-        <EmployeePrescriptionDetailsInformation>
-          <EmployeePrescriptionDetailsInformationData>
-            <span>Gilson Bezerra</span>
-            <span>000.000.000-00</span>
-            <span>Solicitação: Atestado</span>
-            <span>Data de envio: 18/03/22</span>
-          </EmployeePrescriptionDetailsInformationData>
+          <EmployeePrescriptionDetailsInformation>
+            <EmployeePrescriptionDetailsInformationData>
+              <span>{request?.createdBy.name ?? '...'}</span>
+              <span>{request?.createdBy.cpf ?? '000.000.000-00'}</span>
+              <span>Solicitação: {request?.type ?? '...'}</span>
+              <span>
+                Data de envio:
+                {request?.createdAt ? new Date(request?.createdAt ?? 0).toLocaleDateString('pt-BR') : '00/00/0000'}
+              </span>
+            </EmployeePrescriptionDetailsInformationData>
 
-          <EmployeePrescriptionDetailsInformationDescription>
-            <h1>Descrição</h1>
-            <span>Desejo um atestado médico, pois testei positivo para covid-19</span>
-          </EmployeePrescriptionDetailsInformationDescription>
-        </EmployeePrescriptionDetailsInformation>
+            <EmployeePrescriptionDetailsInformationDescription>
+              <h1>Descrição</h1>
+              <span>{request?.text}</span>
+            </EmployeePrescriptionDetailsInformationDescription>
+          </EmployeePrescriptionDetailsInformation>
 
-        <EmployeePrescriptionDetailsVizualizer onClick={downloadFile}>
-          Baixar documento
-        </EmployeePrescriptionDetailsVizualizer>
+          <EmployeePrescriptionDetailsVizualizer onClick={handleDownloadFile}>
+            Baixar documento
+          </EmployeePrescriptionDetailsVizualizer>
 
-        <EmployeePrescriptionDetailsButtons>
-          <Button size="large" onClick={handleGoBack}>
-            Voltar
-          </Button>
-          <div>
-            <Button size="large">Negado</Button>
-            <Button size="large">Enviar</Button>
-          </div>
-        </EmployeePrescriptionDetailsButtons>
-      </EmployeePrescriptionDetailsMain>
+          <EmployeePrescriptionDetailsButtons>
+            <Button size="large" onClick={handleGoBack}>
+              Voltar
+            </Button>
+            <div>
+              <Button size="large" onClick={updateRequest(UpdateRequestEnum.refuse)}>
+                Negado
+              </Button>
+              <Button size="large" onClick={updateRequest(UpdateRequestEnum.accept)}>
+                Enviar
+              </Button>
+            </div>
+          </EmployeePrescriptionDetailsButtons>
+        </EmployeePrescriptionDetailsMain>
+      ) : (
+        <EmployeePrescriptionDetailsMain>
+          <EmployeePrescriptionDetailsInformation>
+            <EmployeePrescriptionNotFoundContainer>
+              <h3>Atestado/Receita não encontrada</h3>
+              Nenhum Atestado/Receita com id <strong>{location.id}</strong> encontrado
+            </EmployeePrescriptionNotFoundContainer>
+          </EmployeePrescriptionDetailsInformation>
+        </EmployeePrescriptionDetailsMain>
+      )}
     </EmployeePrescriptionDetailsContainer>
   );
 }

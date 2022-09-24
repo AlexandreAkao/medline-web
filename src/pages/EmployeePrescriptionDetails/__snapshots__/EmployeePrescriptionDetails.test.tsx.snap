@@ -54,16 +54,18 @@ exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
           class="sc-dIouRR gRYweg"
         >
           <span>
-            Gilson Bezerra
+            ...
           </span>
           <span>
             000.000.000-00
           </span>
           <span>
-            Solicitação: Atestado
+            Solicitação: 
+            ...
           </span>
           <span>
-            Data de envio: 18/03/22
+            Data de envio:
+            00/00/0000
           </span>
         </div>
         <div
@@ -72,9 +74,7 @@ exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
           <h1>
             Descrição
           </h1>
-          <span>
-            Desejo um atestado médico, pois testei positivo para covid-19
-          </span>
+          <span />
         </div>
       </main>
       <button
