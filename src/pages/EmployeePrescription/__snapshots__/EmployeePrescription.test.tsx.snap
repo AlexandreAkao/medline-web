@@ -40,7 +40,7 @@ exports[`EmployeePrescription > should match with snapshot 1`] = `
       </nav>
     </header>
     <div
-      class="sc-dkzDqf erUcfj"
+      class="sc-dkzDqf hTMlLd"
     >
       <h1
         class="sc-hKMtZM cZFLfV"
@@ -87,6 +87,9 @@ exports[`EmployeePrescription > should match with snapshot 1`] = `
             role="rowgroup"
           />
         </table>
+      </div>
+      <div>
+        Pagination
       </div>
     </div>
   </div>

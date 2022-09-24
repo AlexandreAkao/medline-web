@@ -21,6 +21,25 @@ export const EmployeePrescriptionMain = styled.div`
 
   ${TableContainer} {
     width: 100%;
+
+    margin-bottom: 2rem;
+
+    tbody {
+      tr {
+        transition: 0.2s ease all;
+
+        :hover {
+          box-shadow: 0 0 8px 0px ${colors.black.soft};
+          cursor: pointer;
+          position: relative;
+        }
+
+        :active {
+          transition: 0.2s ease all;
+          transform: scale(0.995);
+        }
+      }
+    }
   }
 `;
 

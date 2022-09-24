@@ -2,7 +2,7 @@ import { useTable } from 'react-table';
 
 import { TableContainer } from 'components/Table/styles';
 
-function Table({ columns, data }: ITableProps) {
+function Table({ columns, data, onClickRow }: ITableProps) {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({
     columns,
     data,
@@ -26,7 +26,7 @@ function Table({ columns, data }: ITableProps) {
           {rows.map(row => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()} key={row.id}>
+              <tr {...row.getRowProps()} key={row.id} onClick={() => onClickRow && onClickRow(row.original)}>
                 {row.cells.map(cell => {
                   return (
                     <td {...cell.getCellProps()} key={cell.getCellProps().key}>

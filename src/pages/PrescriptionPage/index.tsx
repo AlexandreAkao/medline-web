@@ -25,6 +25,10 @@ function PrescriptionPage() {
     REJEITADO: 'cancel',
   };
 
+  const handlePageChange = (item: { selected: number }) => {
+    setCurrentPage(item.selected);
+  };
+
   useEffect(() => {
     api
       .get<IPagination<IRequest>>('request', {
@@ -39,10 +43,6 @@ function PrescriptionPage() {
         setPagination(rest);
       });
   }, [currentPage]);
-
-  const handlePageChange = (item: { selected: number }) => {
-    setCurrentPage(item.selected);
-  };
 
   return (
     <PrescriptionPageContainer>

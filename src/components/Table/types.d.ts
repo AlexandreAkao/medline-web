@@ -12,4 +12,5 @@ interface IData {
 interface ITableProps {
   columns: IColumn[];
   data: IData[];
+  onClickRow?: (data: IData) => void;
 }
