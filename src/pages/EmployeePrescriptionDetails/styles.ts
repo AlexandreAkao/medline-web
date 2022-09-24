@@ -94,3 +94,14 @@ export const EmployeePrescriptionDetailsButtons = styled.div`
     gap: 2rem;
   }
 `;
+
+export const EmployeePrescriptionNotFoundContainer = styled.div`
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 1.5rem;
+
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+`;
