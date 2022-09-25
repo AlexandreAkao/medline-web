@@ -49,7 +49,7 @@ function Login() {
     event.preventDefault();
 
     await handleLogin({ email, password });
-    toast.success('Login feito com sucesso');
+    toast.success('Login feito com sucesso', { autoClose: 1000 });
   };
 
   return (

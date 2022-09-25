@@ -19,12 +19,12 @@ export const LoaderContainer = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${getColorAlpha(colors.black.soft, 0.6)};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const LoaderSpin = styled.div`
-  position: absolute;
-  left: 50%;
-  top: 50%;
   width: 100px;
   height: 100px;
   border: 15px solid ${colors.white.lighter};

@@ -21,8 +21,22 @@ import colors from 'styles/colors';
 
 function MedlineHeader() {
   const navigate = useNavigate();
-  const { signed, user, handleLogout } = useAuth();
+  const { signed, user, handleLogout, isEmployee } = useAuth();
   const isTablet = useMediaQuery({ query: `(max-width: ${ScreenSizes.medium})` });
+
+  const userLinks = useMemo(
+    () => ({
+      patientes: {
+        prescription: '/prescription',
+        request: '/request',
+      },
+      employee: {
+        prescription: '/employee/prescription',
+        request: '/employee/patiente-care',
+      },
+    }),
+    [],
+  );
 
   const handleClickRegister = useCallback(() => {
     navigate('/register');
@@ -31,13 +45,13 @@ function MedlineHeader() {
   const navigationButtons = useMemo(() => {
     return signed && user ? (
       <>
-        <HeaderItem as="link" href="/prescription">
+        <HeaderItem as="link" href={userLinks[isEmployee ? 'employee' : 'patientes'].prescription}>
           Atestados/Receitas
         </HeaderItem>
-        <HeaderItem as="link" href="/request">
+        <HeaderItem as="link" href={userLinks[isEmployee ? 'employee' : 'patientes'].request}>
           Solicitação
         </HeaderItem>
-        <HeaderItem as="link">
+        <HeaderItem as="span">
           <OverflowMenu render={<FaRegUser size={20} />}>
             <OverflowMenuTitle>Olá, {user.name}</OverflowMenuTitle>
             <OverflowMenuNavigation>
@@ -63,17 +77,17 @@ function MedlineHeader() {
         </HeaderItem>
       </>
     );
-  }, [handleClickRegister, handleLogout, signed, user]);
+  }, [handleClickRegister, handleLogout, isEmployee, signed, user, userLinks]);
 
   const navigationButtonsBurger = useMemo(() => {
     return signed && user ? (
       <HeaderMenuBurgerContainer>
         <HeaderMenuBurgerTitle>Olá, {user.name}</HeaderMenuBurgerTitle>
-        <HeaderItem href="/prescription">
+        <HeaderItem href={userLinks[isEmployee ? 'employee' : 'patientes'].prescription}>
           <FaReceipt />
           <span>Atestados/Receitas</span>
         </HeaderItem>
-        <HeaderItem href="/request">
+        <HeaderItem href={userLinks[isEmployee ? 'employee' : 'patientes'].request}>
           <FaPlay />
           <span>Solicitação</span>
         </HeaderItem>
@@ -96,7 +110,7 @@ function MedlineHeader() {
         </HeaderItem>
       </>
     );
-  }, [handleLogout, signed, user]);
+  }, [handleLogout, isEmployee, signed, user, userLinks]);
 
   return (
     <Header icon={MedlineLogo} iconAlt="Medline logo" isAuthenticated={signed}>

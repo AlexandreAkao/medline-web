@@ -17,6 +17,7 @@ function HeaderItem({ as = 'link', children, href = '', onClick, ...buttonProps 
           {children}
         </Link>
       ),
+      span: <span>{children}</span>,
     };
     return itemsMap[as];
   }, [as, buttonProps, children, href, onClick]);

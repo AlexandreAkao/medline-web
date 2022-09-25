@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import colors from 'styles/colors';
 
 export const HeaderItemContainer = styled.div`
-  a {
+  > a,
+  > span {
     color: ${colors.white.normal};
     font-weight: 700;
     font-size: 1rem;
