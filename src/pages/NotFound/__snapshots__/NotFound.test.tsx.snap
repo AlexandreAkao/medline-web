@@ -1,0 +1,33 @@
+// Vitest Snapshot v1
+
+exports[`NotFound > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-gsnTZi dGuJDO"
+  >
+    <h1
+      class="sc-dkzDqf eUVvWH"
+    >
+      Oops!
+    </h1>
+    <span
+      class="sc-hKMtZM jeCfWs"
+    >
+      404 - Página não encontrada
+    </span>
+    <span
+      class="sc-eCYdqJ gMWbyh"
+      role="article"
+    >
+      A página que você está procurando pode ter sido removida teve seu nome alterado ou está temporariamente indisponível.
+    </span>
+    <button
+      class="sc-bczRLJ bJBahq"
+      type="button"
+    >
+      Voltar para Home
+    </button>
+  </div>
+  ,
+</div>
+`;
