@@ -11,6 +11,7 @@ describe('FilePreview', () => {
     const props: IFilePreviewProps = {
       children: 'FilePreview example',
       status: 'ready',
+      file: null,
       ...customProps,
     };
     return render(<FilePreview {...props} />);
