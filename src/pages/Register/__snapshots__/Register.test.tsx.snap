@@ -6,20 +6,25 @@ exports[`Register > should match with snapshot 1`] = `
     class="sc-bczRLJ fLfyXd"
   >
     <header
-      class="sc-breuTD bvHIRC"
+      class="sc-breuTD cJmYnz"
       data-testid="test-navigation"
     >
-      <img
-        alt="Medline logo"
-        class="sc-ksZaOG hdhcOY"
-        src="/src/assets/images/medline-logo.svg"
-      />
+      <a
+        href="/"
+        id="header-logo"
+      >
+        <img
+          alt="Medline logo"
+          class="sc-ksZaOG drqLYO"
+          src="/src/assets/images/medline-logo.svg"
+        />
+      </a>
       <nav
         class="sc-hAZoDl jYIcRX"
         data-testid="test-navigation-items"
       >
         <div
-          class="sc-evZas gLFSKm"
+          class="sc-evZas cCkPtk"
         >
           <button
             class="sc-crXcEl jBoqGq"
@@ -29,7 +34,7 @@ exports[`Register > should match with snapshot 1`] = `
           </button>
         </div>
         <div
-          class="sc-evZas gLFSKm"
+          class="sc-evZas cCkPtk"
         >
           <a
             href="/login"

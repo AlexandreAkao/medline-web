@@ -65,13 +65,14 @@ export const OverflowMenuNavigation = styled.nav`
   }
 `;
 
-export const OverflowMenuNavigationItem = styled.div`
+export const OverflowMenuNavigationItem = styled.button`
   padding: 1rem;
   color: ${colors.grey.normal};
   display: flex;
   align-items: center;
   transition: 1s ease all;
   font-size: 1.1rem;
+  font-weight: 700;
 
   :hover {
     span {

@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
     "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet --fix",
+    "lint:warning": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install",
     "ci": "npm ci --omit=dev --ignore-scripts --only=production",
     "test": "vitest related --passWithNoTests --globals",
@@ -44,11 +45,11 @@
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
     "@storybook/addon-links": "^6.4.19",
-    "@storybook/builder-vite": "^0.1.41",
-    "@storybook/react": "^6.4.19",
-    "@storybook/testing-library": "^0.0.9",
-    "@storybook/testing-react": "^1.2.4",
-    "@testing-library/jest-dom": "^5.16.3",
+    "@storybook/builder-vite": "^0.2.2",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/testing-react": "^1.3.0",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.4",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^14.0.0",
@@ -61,8 +62,9 @@
     "@types/styled-components": "^5.1.24",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
-    "@vitejs/plugin-react": "^1.0.7",
-    "@vitest/ui": "^0.8.1",
+    "@vitejs/plugin-react": "^2.1.0",
+    "@vitest/coverage-c8": "^0.23.4",
+    "@vitest/ui": "^0.23.4",
     "babel-loader": "^8.2.4",
     "eslint": "^8.12.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -82,17 +84,17 @@
     "storybook-addon-mock": "^2.4.1",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "^4.5.4",
-    "vite": "^2.8.0",
-    "vite-tsconfig-paths": "^3.4.1",
-    "vitest": "^0.8.1"
+    "vite": "^3.1.3",
+    "vite-tsconfig-paths": "^3.5.1",
+    "vitest": "^0.23.4"
   },
   "engines": {
     "node": "16.x"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "npm run lint:fix",
-      "npm run test:run"
+      "npm run lint",
+      "npm run test"
     ]
   }
 }

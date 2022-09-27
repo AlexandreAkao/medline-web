@@ -1,26 +1,15 @@
 import { screen } from '@testing-library/react';
 import { composeStories } from '@storybook/testing-react';
 import userEvent from '@testing-library/user-event';
-import { vi } from 'vitest';
 
 import * as stories from 'components/Header/Header.stories';
-import { renderWithRouter } from 'utils/testWrapper';
+import { renderWithProvider } from 'utils/testWrapper';
 import Header from 'components/Header';
 
 const { Authenticated, WithoutAuthenticated } = composeStories(stories);
 
-const navigate = vi.fn();
-vi.mock('react-router-dom', async () => {
-  const reactRouterDom = await vi.importActual('react-router-dom');
-
-  return {
-    ...(reactRouterDom as Record<string, unknown>),
-    useNavigate: () => navigate,
-  };
-});
-
 describe('Header', () => {
-  const renderComponent = (customProps: Partial<IHeaderProps> = {}) => {
+  const renderComponent = (customProps: Partial<IHeaderProps> = {}, route = ['/']) => {
     const props: IHeaderProps = {
       isAuthenticated: false,
       icon: 'https://cdn-icons-png.flaticon.com/512/5277/5277459.png',
@@ -28,7 +17,7 @@ describe('Header', () => {
       children: undefined,
       ...customProps,
     };
-    return renderWithRouter(<Header {...props} />);
+    return renderWithProvider(<Header {...props} />, { route });
   };
 
   it('should match with snapshot', () => {
@@ -37,7 +26,7 @@ describe('Header', () => {
   });
 
   it('should render authenticated header', () => {
-    renderWithRouter(<Authenticated />);
+    renderWithProvider(<Authenticated />);
     const navigationContainer = screen.getByTestId('test-navigation');
     const itemsContainer = screen.getByTestId('test-navigation-items');
     expect(navigationContainer).toBeInTheDocument();
@@ -48,7 +37,7 @@ describe('Header', () => {
   });
 
   it('should render header without authenticated', () => {
-    renderWithRouter(<WithoutAuthenticated />);
+    renderWithProvider(<WithoutAuthenticated />);
     const navigationContainer = screen.getByTestId('test-navigation');
     const itemsContainer = screen.getByTestId('test-navigation-items');
     expect(navigationContainer).toBeInTheDocument();
@@ -67,11 +56,12 @@ describe('Header', () => {
   });
 
   it('should redirect to LandingPage when clicked on icon', async () => {
-    renderComponent();
-    const iconElement = screen.getByRole('img');
+    const { history } = renderComponent({}, ['/any-url']);
+
+    const iconElement = screen.getByRole('link');
     await userEvent.click(iconElement);
 
     expect(iconElement).toBeInTheDocument();
-    expect(navigate).toBeCalledWith('/');
+    expect(history.location.pathname).toBe('/');
   });
 });

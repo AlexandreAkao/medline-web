@@ -1,22 +1,21 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import { Nav, LogoImg, NavItemsContainer } from 'components/Header/styles';
 import MedlineLogo from 'assets/images/medline-logo.svg';
 import ScreenSizes from 'styles/screenSizes';
 import MenuBurger from 'components/MenuBurger';
+import { useAuth } from 'hooks/useAuth';
 
 function Header({ icon = MedlineLogo, iconAlt = 'Medline Logo', isAuthenticated, children }: IHeaderProps) {
+  const { isEmployee } = useAuth();
   const isTablet = useMediaQuery({ query: `(max-width: ${ScreenSizes.medium})` });
-  const navigate = useNavigate();
-
-  const handleClickIcon = () => {
-    navigate('/');
-  };
 
   return (
     <Nav isAuthenticated={isAuthenticated} data-testid="test-navigation">
-      <LogoImg src={icon} alt={iconAlt} onClick={handleClickIcon} />
+      <Link to={isEmployee ? '/employee/prescription' : '/'} id="header-logo">
+        <LogoImg src={icon} alt={iconAlt} />
+      </Link>
       {isTablet ? (
         <MenuBurger>{children}</MenuBurger>
       ) : (

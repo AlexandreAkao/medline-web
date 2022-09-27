@@ -19,11 +19,15 @@ export const Nav = styled.header<Pick<IHeaderProps, 'isAuthenticated'>>`
   @media (max-width: ${ScreenSizes.medium}) {
     box-shadow: none;
   }
+
+  a#header-logo {
+    height: 65%;
+  }
 `;
 
 export const LogoImg = styled.img`
   cursor: pointer;
-  height: 65%;
+  height: 100%;
 `;
 
 export const NavItemsContainer = styled.nav`

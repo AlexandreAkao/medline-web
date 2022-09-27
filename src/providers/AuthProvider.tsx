@@ -37,7 +37,11 @@ export function AuthProvider({ children }: IChildren) {
 
           if (userInfo.status === 200) {
             saveUserInfo(userInfo.data);
-            navigate('/');
+            if (userInfo.data.crm) {
+              navigate('/employee/prescription');
+            } else {
+              navigate('/');
+            }
           }
         }
       } finally {
@@ -52,6 +56,7 @@ export function AuthProvider({ children }: IChildren) {
     setUser(null);
     localStorage.removeItem('user');
     localStorage.removeItem('token');
+    localStorage.removeItem('refresh_token');
     navigate('/');
   }, [navigate]);
 

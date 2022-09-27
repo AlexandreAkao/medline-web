@@ -7,7 +7,7 @@ function Loader({ isVisible }: ILoaderProps) {
 
   return (
     <LoaderContainer>
-      <LoaderSpin />
+      <LoaderSpin data-testid="test-loader-spin" />
     </LoaderContainer>
   );
 }

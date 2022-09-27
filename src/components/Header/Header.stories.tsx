@@ -4,6 +4,14 @@ import { FaSignOutAlt } from 'react-icons/fa';
 import Header from 'components/Header';
 import HeaderItem from 'components/HeaderItem';
 import colors from 'styles/colors';
+import { LoaderProvider } from 'providers/LoaderProvider';
+import { AuthProvider } from 'providers/AuthProvider';
+
+const createWrapper = ({ children }: IChildren) => (
+  <LoaderProvider>
+    <AuthProvider>{children}</AuthProvider>
+  </LoaderProvider>
+);
 
 export default {
   title: 'Header',
@@ -28,7 +36,7 @@ export default {
   component: Header,
 } as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = args => <Header {...args} />;
+const Template: ComponentStory<typeof Header> = args => createWrapper({ children: <Header {...args} /> });
 
 export const Authenticated = Template.bind({});
 Authenticated.args = {

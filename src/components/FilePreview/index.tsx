@@ -38,6 +38,7 @@ function FilePreview({ children, status, file }: IFilePreviewProps) {
           color={colors.primary.darkest}
           className="icon-action download"
           onClick={handleDownloadFile}
+          data-testid="icon-download-test"
         />
       </FilePreviewActionContainer>
     </FilePreviewContainer>

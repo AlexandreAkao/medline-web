@@ -37,7 +37,7 @@ api.interceptors.response.use(
           },
           {
             params: {
-              key: 'AIzaSyDYolHTkT0zuI3X1MNup36eSi2gZ3INa2g',
+              key: import.meta.env.VITE_FIREBASE_KEY,
             },
           },
         )

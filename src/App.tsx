@@ -14,6 +14,7 @@ import EmployeePrescription from 'pages/EmployeePrescription';
 import EmployeePrescriptionDetails from 'pages/EmployeePrescriptionDetails';
 import Loader from 'components/Loader';
 import { useLoader } from 'hooks/useLoader';
+import NotFound from 'pages/NotFound';
 
 function App() {
   const { isLoading } = useLoader();
@@ -25,7 +26,7 @@ function App() {
         <Loader isVisible={isLoading} />
 
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route index element={<LandingPage />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="queue" element={<QueuePage />} />
@@ -37,6 +38,7 @@ function App() {
             <Route path="prescription" element={<EmployeePrescription />} />
             <Route path="prescription-details/:id" element={<EmployeePrescriptionDetails />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

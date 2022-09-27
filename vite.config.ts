@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
     globals: true,
+    watch: false,
     environment: 'jsdom',
     setupFiles: './src/config/testSetup.ts',
     coverage: {

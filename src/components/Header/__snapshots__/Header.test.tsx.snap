@@ -3,18 +3,24 @@
 exports[`Header > should match with snapshot 1`] = `
 <div>
   <header
-    class="sc-gsnTZi jLFYRz"
+    class="sc-gsnTZi cTUSvm"
     data-testid="test-navigation"
   >
-    <img
-      alt="icon"
-      class="sc-dkzDqf dxiqfB"
-      src="https://cdn-icons-png.flaticon.com/512/5277/5277459.png"
-    />
+    <a
+      href="/"
+      id="header-logo"
+    >
+      <img
+        alt="icon"
+        class="sc-dkzDqf jWFUvj"
+        src="https://cdn-icons-png.flaticon.com/512/5277/5277459.png"
+      />
+    </a>
     <nav
       class="sc-hKMtZM iKwNjC"
       data-testid="test-navigation-items"
     />
   </header>
+  ,
 </div>
 `;
