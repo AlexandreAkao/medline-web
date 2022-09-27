@@ -6,20 +6,25 @@ exports[`Login > should match with snapshot 1`] = `
     class="sc-eCYdqJ kKlpka"
   >
     <header
-      class="sc-fnykZs goXKXN"
+      class="sc-fnykZs jJQqhs"
       data-testid="test-navigation"
     >
-      <img
-        alt="Medline logo"
-        class="sc-fEOsli bGitPF"
-        src="/src/assets/images/medline-logo.svg"
-      />
+      <a
+        href="/"
+        id="header-logo"
+      >
+        <img
+          alt="Medline logo"
+          class="sc-fEOsli eHpUGX"
+          src="/src/assets/images/medline-logo.svg"
+        />
+      </a>
       <nav
         class="sc-bjUoiL dEUTdv"
         data-testid="test-navigation-items"
       >
         <div
-          class="sc-hAZoDl cJByLp"
+          class="sc-hAZoDl dmrzor"
         >
           <button
             class="sc-ksZaOG iuwGxm"
@@ -29,7 +34,7 @@ exports[`Login > should match with snapshot 1`] = `
           </button>
         </div>
         <div
-          class="sc-hAZoDl cJByLp"
+          class="sc-hAZoDl dmrzor"
         >
           <a
             href="/login"

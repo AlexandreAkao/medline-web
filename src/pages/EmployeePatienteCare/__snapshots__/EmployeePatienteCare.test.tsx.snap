@@ -6,20 +6,25 @@ exports[`EmployeePatienteCare > should match with snapshot 1`] = `
     class="sc-evZas cdVbbs"
   >
     <header
-      class="sc-gsnTZi jLFYRz"
+      class="sc-gsnTZi cTUSvm"
       data-testid="test-navigation"
     >
-      <img
-        alt="Medline logo"
-        class="sc-dkzDqf dxiqfB"
-        src="/src/assets/images/medline-logo.svg"
-      />
+      <a
+        href="/"
+        id="header-logo"
+      >
+        <img
+          alt="Medline logo"
+          class="sc-dkzDqf jWFUvj"
+          src="/src/assets/images/medline-logo.svg"
+        />
+      </a>
       <nav
         class="sc-hKMtZM iKwNjC"
         data-testid="test-navigation-items"
       >
         <div
-          class="sc-bczRLJ erPxbe"
+          class="sc-bczRLJ fZTNhM"
         >
           <button
             class="sc-jSMfEi fWVToL"
@@ -29,7 +34,7 @@ exports[`EmployeePatienteCare > should match with snapshot 1`] = `
           </button>
         </div>
         <div
-          class="sc-bczRLJ erPxbe"
+          class="sc-bczRLJ fZTNhM"
         >
           <a
             href="/login"
