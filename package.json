@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
     "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet --fix",
+    "lint:warning": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install",
     "ci": "npm ci --omit=dev --ignore-scripts --only=production",
     "test": "vitest related --passWithNoTests --globals",

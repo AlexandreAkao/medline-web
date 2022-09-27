@@ -27,7 +27,7 @@ function Modal({ isVisible, onClose, onOpen, customStyles, children }: IModalPro
 
   return (
     <Portal wrapperId="portal-modal">
-      <ModalContainer ref={ref}>
+      <ModalContainer ref={ref} data-testid="test-modal-container">
         <ModalContent ref={refContent} customStyles={customStyles}>
           {children}
         </ModalContent>

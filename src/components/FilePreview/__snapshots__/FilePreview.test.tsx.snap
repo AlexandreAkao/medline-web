@@ -33,6 +33,7 @@ exports[`FilePreview > should match with snapshot 1`] = `
       <svg
         class="icon-action download"
         color="#257472"
+        data-testid="icon-download-test"
         fill="currentColor"
         height="25"
         stroke="currentColor"

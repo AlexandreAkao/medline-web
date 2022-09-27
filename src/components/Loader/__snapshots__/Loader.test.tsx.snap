@@ -1,0 +1,14 @@
+// Vitest Snapshot v1
+
+exports[`Loader > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ gYwlUD"
+  >
+    <div
+      class="sc-gsnTZi hCaNjM"
+      data-testid="test-loader-spin"
+    />
+  </div>
+</div>
+`;
