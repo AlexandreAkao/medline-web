@@ -59,17 +59,30 @@ exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
           class="sc-dIouRR gRYweg"
         >
           <span>
+            <strong>
+              Nome:
+            </strong>
+             
             ...
           </span>
           <span>
+            <strong>
+              CPF:
+            </strong>
+             
             000.000.000-00
           </span>
           <span>
-            Solicitação: 
+            <strong>
+              Solicitação:
+            </strong>
+             
             ...
           </span>
           <span>
-            Data de envio:
+            <strong>
+              Data de envio:
+            </strong>
             00/00/0000
           </span>
         </div>

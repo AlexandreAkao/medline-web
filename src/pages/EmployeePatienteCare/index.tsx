@@ -33,7 +33,8 @@ function EmployeePatienteCare() {
 
   const updatePatientes = async () => {
     const patients = await api.get<IAppointment[]>('appointment');
-    setAppointments(patients.data);
+
+    setAppointments(patients.data.filter(patient => patient.queue_position !== null));
   };
 
   const handleChangePatienteStatus = async (_event?: React.MouseEvent<HTMLButtonElement>, option?: IOption) => {

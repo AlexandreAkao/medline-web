@@ -14,7 +14,7 @@ function NotFound() {
   const navigate = useNavigate();
   const { isEmployee } = useAuth();
 
-  const handleGoToHome = () => navigate(isEmployee ? '/employee/prescription' : '/');
+  const handleGoToHome = () => navigate(isEmployee ? '/employee/patiente-care' : '/');
 
   return (
     <NotFoundContainer>

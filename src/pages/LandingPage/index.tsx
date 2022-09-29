@@ -1,7 +1,6 @@
 import { FaHospitalAlt } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 
 import {
   DropdownContainer,
@@ -13,12 +12,10 @@ import {
 import Dropdown from 'components/Dropdown';
 import api from 'service/api';
 import MedlineHeader from 'components/Header/MedlineHeader';
-import { useAuth } from 'hooks/useAuth';
 
 function LandingPage() {
   const [ubs, setUbs] = useState<IUbsOptions[]>([]);
   const navigate = useNavigate();
-  const { signed } = useAuth();
 
   useEffect(() => {
     api.get<IUbs[]>('ubs').then(ubsData => {
@@ -33,8 +30,6 @@ function LandingPage() {
   }, []);
 
   const handleSearchUbs = (_event?: React.MouseEvent<HTMLButtonElement>, option?: IOption) => {
-    if (!signed) return toast.info('Usuário precisa estar logado');
-
     return navigate('/queue', {
       state: {
         selectedUbs: option?.value,

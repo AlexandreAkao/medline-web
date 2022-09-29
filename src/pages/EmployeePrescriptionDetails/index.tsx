@@ -71,11 +71,17 @@ function EmployeePrescriptionDetails() {
 
           <EmployeePrescriptionDetailsInformation>
             <EmployeePrescriptionDetailsInformationData>
-              <span>{request?.createdBy.name ?? '...'}</span>
-              <span>{request?.createdBy.cpf ?? '000.000.000-00'}</span>
-              <span>Solicitação: {request?.type ?? '...'}</span>
               <span>
-                Data de envio:
+                <strong>Nome:</strong> {request?.createdBy.name ?? '...'}
+              </span>
+              <span>
+                <strong>CPF:</strong> {request?.createdBy.cpf ?? '000.000.000-00'}
+              </span>
+              <span>
+                <strong>Solicitação:</strong> {request?.type ?? '...'}
+              </span>
+              <span>
+                <strong>Data de envio:</strong>
                 {request?.createdAt ? new Date(request?.createdAt ?? 0).toLocaleDateString('pt-BR') : '00/00/0000'}
               </span>
             </EmployeePrescriptionDetailsInformationData>

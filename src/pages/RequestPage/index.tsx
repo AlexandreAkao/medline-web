@@ -24,7 +24,7 @@ import FileInput from 'components/FileInput';
 import Radio from 'components/Radio';
 import { requestFormInitialState, requestFormReducer } from 'pages/RequestPage/reducer';
 import { REQUEST_OPTIONS } from 'pages/RequestPage/constants';
-import { isFormValid } from './validation';
+import { isFormValid } from 'pages/RequestPage/validation';
 import api from 'service/api';
 import colors from 'styles/colors';
 import { useLoader } from 'hooks/useLoader';
@@ -114,7 +114,7 @@ function RequestPage() {
             <FaPaperclip color={requestForm.file ? colors.primary.normal : colors.black.normal} />
             Anexar
           </FileInput>
-          <Button primary={false} type="submit" disabled={isLoading}>
+          <Button primary={false} type="submit" disabled={isLoading} data-testid="test-button-submit">
             <FaRegPaperPlane />
             Enviar
           </Button>

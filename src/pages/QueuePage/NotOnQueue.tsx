@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
 import { FaHospitalAlt } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 import api from 'service/api';
 import Button from 'components/Button';
 import Dropdown from 'components/Dropdown';
 import { QueuePageButtonsContainer, QueuePageInfoContainer, QueuePageSection } from 'pages/QueuePage/styles';
+import { useAuth } from 'hooks/useAuth';
 
 function NotOnQueue({ selectedUbsId, updateQueue }: INotOnQueueProps) {
   const [ubs, setUbs] = useState<IUbsOptions[]>([]);
   const [selectedUbs, setSelectedUbs] = useState<IUbsOptions>();
+  const { signed } = useAuth();
 
   const handleSelectOption = async (value: unknown) => {
     if (value) {
@@ -20,6 +23,11 @@ function NotOnQueue({ selectedUbsId, updateQueue }: INotOnQueueProps) {
   };
 
   const handleEnterQueue = async () => {
+    if (!signed) {
+      toast.info('Usuário precisa estar logado');
+      return;
+    }
+
     await api.post(`appointment/ubs/${selectedUbs?.id}`);
     await updateQueue();
   };

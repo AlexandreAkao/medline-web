@@ -38,7 +38,7 @@ export function AuthProvider({ children }: IChildren) {
           if (userInfo.status === 200) {
             saveUserInfo(userInfo.data);
             if (userInfo.data.crm) {
-              navigate('/employee/prescription');
+              navigate('/employee/patiente-care');
             } else {
               navigate('/');
             }

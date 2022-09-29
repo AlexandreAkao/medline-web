@@ -68,7 +68,7 @@ describe('NotFound', () => {
 
       expect(buttonElement).toBeInTheDocument();
 
-      expect(history.location.pathname).toBe('/employee/prescription');
+      expect(history.location.pathname).toBe('/employee/patiente-care');
     });
   });
 });

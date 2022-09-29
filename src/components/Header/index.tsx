@@ -13,7 +13,7 @@ function Header({ icon = MedlineLogo, iconAlt = 'Medline Logo', isAuthenticated,
 
   return (
     <Nav isAuthenticated={isAuthenticated} data-testid="test-navigation">
-      <Link to={isEmployee ? '/employee/prescription' : '/'} id="header-logo">
+      <Link to={isEmployee ? '/employee/patiente-care' : '/'} id="header-logo">
         <LogoImg src={icon} alt={iconAlt} />
       </Link>
       {isTablet ? (
