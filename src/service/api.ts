@@ -46,9 +46,8 @@ api.interceptors.response.use(
 
           localStorage.setItem('token', accessToken);
         });
-    } else if (error.response?.status !== 404)
-      if (error.response && error.response.status >= 500)
-        toast.error(error.message, { autoClose: 3000, theme: 'colored' });
+    } else if (error.response && error.response.status >= 500)
+      toast.error(error.message, { autoClose: 3000, theme: 'colored' });
     return Promise.reject(error);
   },
 );

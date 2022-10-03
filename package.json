@@ -14,7 +14,7 @@
     "ci": "npm ci --omit=dev --ignore-scripts --only=production",
     "test": "vitest related --passWithNoTests --globals",
     "test:watch": "vitest dev --passWithNoTests --watch --globals",
-    "test:ui": "vitest --ui --passWithNoTests --globals",
+    "test:ui": "vitest --ui --passWithNoTests --watch --globals",
     "test:run": "vitest --run --passWithNoTests --globals",
     "coverage": "vitest run --coverage --globals",
     "storybook": "start-storybook -p 6006",

@@ -23,6 +23,8 @@ function OnQueue({ queueInfo, updateQueue }: IOnQueueProps) {
     api.get<IUbs>(`ubs/${queueInfo.ubsId}`).then(ubsData => {
       setUbs(ubsData.data);
     });
+
+    return () => setUbs(undefined);
   }, [queueInfo.ubsId]);
 
   return (

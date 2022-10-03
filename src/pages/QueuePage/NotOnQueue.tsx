@@ -23,13 +23,17 @@ function NotOnQueue({ selectedUbsId, updateQueue }: INotOnQueueProps) {
   };
 
   const handleEnterQueue = async () => {
-    if (!signed) {
-      toast.info('Usuário precisa estar logado');
-      return;
-    }
+    try {
+      if (!signed) {
+        toast.info('Usuário precisa estar logado');
+        return;
+      }
 
-    await api.post(`appointment/ubs/${selectedUbs?.id}`);
-    await updateQueue();
+      await api.post(`appointment/ubs/${selectedUbs?.id}`);
+      await updateQueue();
+    } catch (e) {
+      toast.error('Ocorreu um erro ao entrar na fila, tente novamente');
+    }
   };
 
   useEffect(() => {
@@ -52,6 +56,8 @@ function NotOnQueue({ selectedUbsId, updateQueue }: INotOnQueueProps) {
         }
       }
     });
+
+    return () => setSelectedUbs(undefined);
   }, [selectedUbsId]);
 
   return (

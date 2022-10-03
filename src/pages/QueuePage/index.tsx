@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState, useLayoutEffect } from 'react';
 
 import { QueuePageContainer } from 'pages/QueuePage/styles';
 import MedlineHeader from 'components/Header/MedlineHeader';
@@ -13,15 +13,17 @@ function QueuePage() {
 
   const selectedUbs = (location.state as ILocationStateQueue)?.selectedUbs;
 
-  const updateQueue = () =>
-    api
-      .get<IQueue>('/appointment/me')
-      .then(data => setIsOnQueue(data.data))
-      .catch(() => {
-        setIsOnQueue(undefined);
-      });
+  const updateQueue = async () => {
+    try {
+      const hasAppointment = await api.get<IQueue>('/appointment/me');
 
-  useEffect(() => {
+      setIsOnQueue(hasAppointment.data);
+    } catch (error) {
+      setIsOnQueue(undefined);
+    }
+  };
+
+  useLayoutEffect(() => {
     updateQueue();
   }, []);
 
