@@ -2,8 +2,110 @@
 
 exports[`Pagination > should match with snapshot 1`] = `
 <div>
-  <div>
-    Pagination
+  <div
+    class="sc-bczRLJ ekHjkh"
+  >
+    <ul
+      class="pagination-container"
+    >
+      <li
+        class="previous disabled"
+      >
+        <a
+          aria-disabled="true"
+          aria-label="Previous page"
+          class=" "
+          rel="prev"
+          role="button"
+          tabindex="-1"
+        >
+          &lt;
+        </a>
+      </li>
+      <li
+        class="selected"
+      >
+        <a
+          aria-current="page"
+          aria-label="Page 1 is your current page"
+          rel="canonical"
+          role="button"
+          tabindex="-1"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Page 2"
+          rel="next"
+          role="button"
+          tabindex="0"
+        >
+          2
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Page 3"
+          role="button"
+          tabindex="0"
+        >
+          3
+        </a>
+      </li>
+      <li
+        class="break"
+      >
+        <a
+          role="button"
+          tabindex="0"
+        >
+          ...
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Page 8"
+          role="button"
+          tabindex="0"
+        >
+          8
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Page 9"
+          role="button"
+          tabindex="0"
+        >
+          9
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Page 10"
+          role="button"
+          tabindex="0"
+        >
+          10
+        </a>
+      </li>
+      <li
+        class="next"
+      >
+        <a
+          aria-disabled="false"
+          aria-label="Next page"
+          class=""
+          rel="next"
+          role="button"
+          tabindex="0"
+        >
+          &gt;
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 `;

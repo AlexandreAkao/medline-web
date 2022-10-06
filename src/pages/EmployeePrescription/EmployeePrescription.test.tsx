@@ -7,12 +7,6 @@ import api from 'service/api';
 import { paginationMock } from '__tests__/mocks/pagination.mock';
 import { requestMock } from '__tests__/mocks/request.mock';
 
-vi.mock('components/Pagination', async () => {
-  return {
-    default: () => <div>Pagination</div>,
-  };
-});
-
 describe('EmployeePrescription', () => {
   beforeEach(() => {
     vi.spyOn(api, 'get').mockImplementation(() =>

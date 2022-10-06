@@ -1,6 +1,8 @@
-import ReactPaginate from 'react-paginate';
+import RP from 'react-paginate';
 
 import { PaginationContainer } from 'components/Pagination/styles';
+
+const ReactPaginate = (RP as any).default ? (RP as any).default : RP;
 
 function Pagination({
   pageCount,

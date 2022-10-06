@@ -93,8 +93,41 @@ exports[`EmployeePrescription > should match with snapshot 1`] = `
           />
         </table>
       </div>
-      <div>
-        Pagination
+      <div
+        class="sc-hAZoDl dAlGie"
+      >
+        <ul
+          class="pagination-container"
+        >
+          <li
+            class="previous disabled"
+          >
+            <a
+              aria-disabled="true"
+              aria-label="Previous page"
+              class=" "
+              rel="prev"
+              role="button"
+              tabindex="-1"
+            >
+              &lt;
+            </a>
+          </li>
+          <li
+            class="next"
+          >
+            <a
+              aria-disabled="false"
+              aria-label="Next page"
+              class=""
+              rel="next"
+              role="button"
+              tabindex="0"
+            >
+              &gt;
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
