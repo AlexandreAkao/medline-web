@@ -1,0 +1,95 @@
+// Vitest Snapshot v1
+
+exports[`PrescriptionPage > should match with snapshot 1`] = `
+<div>
+  <main
+    class="sc-hKMtZM euFtsb"
+  >
+    <header
+      class="sc-iBkjds bWjYYi"
+      data-testid="test-navigation"
+    >
+      <a
+        href="/"
+        id="header-logo"
+      >
+        <img
+          alt="Medline logo"
+          class="sc-ftvSup cZvwzf"
+          src="/src/assets/images/medline-logo.svg"
+        />
+      </a>
+      <nav
+        class="sc-papXJ kwFdqk"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-gKXOVf aoHZA"
+        >
+          <button
+            class="sc-kDDrLX fqBuiE"
+            type="button"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-gKXOVf aoHZA"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="sc-jSMfEi ksOgzB"
+    >
+      <h3
+        class="sc-eCYdqJ bQnWtR"
+      >
+        Atestados e Receitas
+      </h3>
+      <div
+        class="sc-fEOsli gBvLek"
+      >
+        <ul
+          class="pagination-container"
+        >
+          <li
+            class="previous disabled"
+          >
+            <a
+              aria-disabled="true"
+              aria-label="Previous page"
+              class=" "
+              rel="prev"
+              role="button"
+              tabindex="-1"
+            >
+              &lt;
+            </a>
+          </li>
+          <li
+            class="next"
+          >
+            <a
+              aria-disabled="false"
+              aria-label="Next page"
+              class=""
+              rel="next"
+              role="button"
+              tabindex="0"
+            >
+              &gt;
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  ,
+</div>
+`;

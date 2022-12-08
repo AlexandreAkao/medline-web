@@ -11,6 +11,7 @@
     "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
     "plugin:storybook/recommended",
+    "plugin:react-hooks/recommended",
     "prettier",
     "plugin:prettier/recommended"
   ],
@@ -25,9 +26,24 @@
   "plugins": [
     "react",
     "@typescript-eslint",
-    "prettier"
+    "prettier",
+    "react-hooks"
   ],
   "rules": {
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "enableDangerousAutofixThisMayCauseInfiniteLoops": true
+      }
+    ],
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
     "@typescript-eslint/no-empty-function": [
       "error",
       { "allow": ["arrowFunctions"] }
@@ -50,7 +66,7 @@
         "jsx": "never"
       }
     ],
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "printWidth": 120 }],
     "import/no-extraneous-dependencies": "off",
     "import/order": [
       "error",

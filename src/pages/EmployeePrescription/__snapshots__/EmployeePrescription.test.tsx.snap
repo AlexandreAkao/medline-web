@@ -1,0 +1,136 @@
+// Vitest Snapshot v1
+
+exports[`EmployeePrescription > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-gsnTZi fatJle"
+  >
+    <header
+      class="sc-jSMfEi ypYGZ"
+      data-testid="test-navigation"
+    >
+      <a
+        href="/"
+        id="header-logo"
+      >
+        <img
+          alt="Medline logo"
+          class="sc-gKXOVf dKYKzm"
+          src="/src/assets/images/medline-logo.svg"
+        />
+      </a>
+      <nav
+        class="sc-iBkjds iOmqAx"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-eCYdqJ bpawvP"
+        >
+          <button
+            class="sc-papXJ fnEGjm"
+            type="button"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-eCYdqJ bpawvP"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="sc-dkzDqf hTMlLd"
+    >
+      <h1
+        class="sc-hKMtZM cZFLfV"
+      >
+        Atestados e Receitas
+      </h1>
+      <div
+        class="sc-bczRLJ kzXtbC"
+      >
+        <table
+          role="table"
+        >
+          <thead>
+            <tr
+              role="row"
+            >
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Lugar na fila
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Nome
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                CPF
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            role="rowgroup"
+          />
+        </table>
+      </div>
+      <div
+        class="sc-hAZoDl dAlGie"
+      >
+        <ul
+          class="pagination-container"
+        >
+          <li
+            class="previous disabled"
+          >
+            <a
+              aria-disabled="true"
+              aria-label="Previous page"
+              class=" "
+              rel="prev"
+              role="button"
+              tabindex="-1"
+            >
+              &lt;
+            </a>
+          </li>
+          <li
+            class="next"
+          >
+            <a
+              aria-disabled="false"
+              aria-label="Next page"
+              class=""
+              rel="next"
+              role="button"
+              tabindex="0"
+            >
+              &gt;
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  ,
+</div>
+`;

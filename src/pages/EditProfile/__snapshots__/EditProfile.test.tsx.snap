@@ -1,0 +1,183 @@
+// Vitest Snapshot v1
+
+exports[`EditProfile > should match with snapshot 1`] = `
+<div>
+  <main
+    class="sc-jSMfEi sDxaw"
+  >
+    <header
+      class="sc-papXJ hTGftY"
+      data-testid="test-navigation"
+    >
+      <a
+        href="/"
+        id="header-logo"
+      >
+        <img
+          alt="Medline logo"
+          class="sc-jqUVSM dntOfP"
+          src="/src/assets/images/medline-logo.svg"
+        />
+      </a>
+      <nav
+        class="sc-kDDrLX ekWlzz"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-ftvSup bPTrqp"
+        >
+          <button
+            class="sc-eCYdqJ fDUTgR"
+            type="button"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-ftvSup bPTrqp"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <section
+      class="sc-gKXOVf kQmpnx"
+    >
+      <h1
+        class="sc-iBkjds eYqXUC"
+      >
+        Editar Perfil
+      </h1>
+      <div
+        class="sc-bczRLJ itlDIl"
+      >
+        <span
+          class="sc-gsnTZi jYHEuj"
+          data-testid="test-input-label"
+        >
+          Nome
+        </span>
+        <div
+          class="sc-dkzDqf bMJUCZ"
+        >
+          <input
+            class="sc-hKMtZM fIniom"
+            data-testid="test-input"
+            placeholder="Nome"
+            role="textbox"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ itlDIl"
+      >
+        <span
+          class="sc-gsnTZi jYHEuj"
+          data-testid="test-input-label"
+        >
+          Email
+        </span>
+        <div
+          class="sc-dkzDqf bMJUCZ"
+        >
+          <input
+            class="sc-hKMtZM fIniom"
+            data-testid="test-input"
+            placeholder="Email"
+            role="textbox"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ itlDIl"
+      >
+        <span
+          class="sc-gsnTZi jYHEuj"
+          data-testid="test-input-label"
+        >
+          Senha
+        </span>
+        <div
+          class="sc-dkzDqf bMJUCZ"
+        >
+          <input
+            class="sc-hKMtZM fIniom"
+            data-testid="test-input"
+            placeholder="Senha"
+            role="textbox"
+            type="password"
+            value=""
+          />
+          <svg
+            data-testid="test-eye-icon"
+            fill="currentColor"
+            height="26"
+            role="img"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 576 512"
+            width="26"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ itlDIl"
+      >
+        <span
+          class="sc-gsnTZi jYHEuj"
+          data-testid="test-input-label"
+        >
+          Confirmar senha
+        </span>
+        <div
+          class="sc-dkzDqf bMJUCZ"
+        >
+          <input
+            class="sc-hKMtZM fIniom"
+            data-testid="test-input"
+            placeholder="Confirmar senha"
+            role="textbox"
+            type="password"
+            value=""
+          />
+          <svg
+            data-testid="test-eye-icon"
+            fill="currentColor"
+            height="26"
+            role="img"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 576 512"
+            width="26"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+            />
+          </svg>
+        </div>
+      </div>
+      <button
+        class="sc-eCYdqJ cDNOAB"
+        type="button"
+      >
+        Salvar
+      </button>
+    </section>
+  </main>
+  ,
+</div>
+`;

@@ -1,0 +1,17 @@
+// Vitest Snapshot v1
+
+exports[`FileInput > should match with snapshot 1`] = `
+<div>
+  <button
+    class="sc-bczRLJ bJBahq"
+    type="button"
+  >
+    FileInput example
+  </button>
+  <input
+    class="sc-gsnTZi iwTHrt"
+    data-testid="file-input-test"
+    type="file"
+  />
+</div>
+`;

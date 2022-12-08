@@ -1,0 +1,104 @@
+// Vitest Snapshot v1
+
+exports[`EmployeePatienteCare > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-evZas cdVbbs"
+  >
+    <header
+      class="sc-gsnTZi cTUSvm"
+      data-testid="test-navigation"
+    >
+      <a
+        href="/"
+        id="header-logo"
+      >
+        <img
+          alt="Medline logo"
+          class="sc-dkzDqf jWFUvj"
+          src="/src/assets/images/medline-logo.svg"
+        />
+      </a>
+      <nav
+        class="sc-hKMtZM iKwNjC"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-bczRLJ fZTNhM"
+        >
+          <button
+            class="sc-jSMfEi fWVToL"
+            type="button"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-bczRLJ fZTNhM"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="sc-breuTD leQAZN"
+    >
+      <h1
+        class="sc-ksZaOG fvoegn"
+      >
+        Atendimento
+      </h1>
+      <div
+        class="sc-crXcEl fGbdKS"
+      >
+        <table
+          role="table"
+        >
+          <thead>
+            <tr
+              role="row"
+            >
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Lugar na fila
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Nome
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Previsão de atendimento
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              >
+                Status
+              </th>
+              <th
+                colspan="1"
+                role="columnheader"
+              />
+            </tr>
+          </thead>
+          <tbody
+            role="rowgroup"
+          />
+        </table>
+      </div>
+    </div>
+  </div>
+  ,
+</div>
+`;

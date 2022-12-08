@@ -1,0 +1,21 @@
+// Vitest Snapshot v1
+
+exports[`Radio > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-dkzDqf eMxdaI"
+  >
+    <input
+      class="sc-bczRLJ itSYxX"
+      id="radio-test-id"
+      type="radio"
+    />
+    <label
+      class="sc-gsnTZi cTEWgn"
+      for="radio-test-id"
+    >
+      radio-test
+    </label>
+  </div>
+</div>
+`;

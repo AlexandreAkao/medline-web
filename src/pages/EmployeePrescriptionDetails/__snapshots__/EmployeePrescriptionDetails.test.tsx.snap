@@ -1,0 +1,131 @@
+// Vitest Snapshot v1
+
+exports[`EmployeePrescriptionDetails > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-fnykZs bHDYOE"
+  >
+    <header
+      class="sc-dkzDqf ifZngJ"
+      data-testid="test-navigation"
+    >
+      <a
+        href="/"
+        id="header-logo"
+      >
+        <img
+          alt="Medline logo"
+          class="sc-hKMtZM kcTwZQ"
+          src="/src/assets/images/medline-logo.svg"
+        />
+      </a>
+      <nav
+        class="sc-eCYdqJ dDvGMN"
+        data-testid="test-navigation-items"
+      >
+        <div
+          class="sc-gsnTZi eqeYZu"
+        >
+          <button
+            class="sc-bczRLJ bJBahq"
+            type="button"
+          >
+            Cadastro
+          </button>
+        </div>
+        <div
+          class="sc-gsnTZi eqeYZu"
+        >
+          <a
+            href="/login"
+          >
+            Entrar
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="sc-fEOsli ddvlil"
+    >
+      <h1
+        class="sc-ksZaOG fvoegn"
+      >
+        Atestados e Receitas
+      </h1>
+      <main
+        class="sc-idiyUo rrOrh"
+      >
+        <div
+          class="sc-dIouRR gRYweg"
+        >
+          <span>
+            <strong>
+              Nome:
+            </strong>
+             
+            ...
+          </span>
+          <span>
+            <strong>
+              CPF:
+            </strong>
+             
+            000.000.000-00
+          </span>
+          <span>
+            <strong>
+              Solicitação:
+            </strong>
+             
+            ...
+          </span>
+          <span>
+            <strong>
+              Data de envio:
+            </strong>
+            00/00/0000
+          </span>
+        </div>
+        <div
+          class="sc-hHLeRK kwKmCy"
+        >
+          <h1>
+            Descrição
+          </h1>
+          <span />
+        </div>
+      </main>
+      <button
+        class="sc-dmRaPn vVEyK"
+      >
+        Baixar documento
+      </button>
+      <div
+        class="sc-kgflAQ hqseha"
+      >
+        <button
+          class="sc-bczRLJ iAUOAI"
+          type="button"
+        >
+          Voltar
+        </button>
+        <div>
+          <button
+            class="sc-bczRLJ iAUOAI"
+            type="button"
+          >
+            Negado
+          </button>
+          <button
+            class="sc-bczRLJ iAUOAI"
+            type="button"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  ,
+</div>
+`;

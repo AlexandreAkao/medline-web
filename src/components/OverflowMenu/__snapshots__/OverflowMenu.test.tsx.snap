@@ -1,0 +1,11 @@
+// Vitest Snapshot v1
+
+exports[`Checkbox > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ fqRZws"
+  >
+    Example
+  </div>
+</div>
+`;

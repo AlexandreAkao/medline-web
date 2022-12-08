@@ -1,0 +1,85 @@
+import { useEffect, useState } from 'react';
+import { FaHospitalAlt } from 'react-icons/fa';
+import { toast } from 'react-toastify';
+
+import api from 'service/api';
+import Button from 'components/Button';
+import Dropdown from 'components/Dropdown';
+import { QueuePageButtonsContainer, QueuePageInfoContainer, QueuePageSection } from 'pages/QueuePage/styles';
+import { useAuth } from 'hooks/useAuth';
+
+function NotOnQueue({ selectedUbsId, updateQueue }: INotOnQueueProps) {
+  const [ubs, setUbs] = useState<IUbsOptions[]>([]);
+  const [selectedUbs, setSelectedUbs] = useState<IUbsOptions>();
+  const { signed } = useAuth();
+
+  const handleSelectOption = async (value: unknown) => {
+    if (value) {
+      const valueOption = value as IUbsOptions;
+      const ubsData = await api.get<IUbs>(`ubs/${valueOption?.id}`);
+
+      setSelectedUbs({ ...valueOption, ...ubsData.data });
+    }
+  };
+
+  const handleEnterQueue = async () => {
+    try {
+      if (!signed) {
+        toast.info('Usuário precisa estar logado');
+        return;
+      }
+
+      await api.post(`appointment/ubs/${selectedUbs?.id}`);
+      await updateQueue();
+    } catch (e) {
+      toast.error('Ocorreu um erro ao entrar na fila, tente novamente');
+    }
+  };
+
+  useEffect(() => {
+    api.get<IUbs[]>('ubs').then(ubsData => {
+      const ubsFormated = ubsData.data.map(ubsInfo => ({
+        ...ubsInfo,
+        label: ubsInfo.name,
+        value: String(ubsInfo.id),
+      }));
+
+      setUbs(ubsFormated);
+
+      if (selectedUbsId) {
+        const ubsSelectedById = ubsFormated.find(ubsInfo => String(ubsInfo.id) === selectedUbsId);
+
+        if (ubsSelectedById) {
+          api.get<IUbs>(`ubs/${selectedUbsId}`).then(ubsInfoData => {
+            setSelectedUbs({ ...ubsSelectedById, ...ubsInfoData.data });
+          });
+        }
+      }
+    });
+
+    return () => setSelectedUbs(undefined);
+  }, [selectedUbsId]);
+
+  return (
+    <QueuePageSection>
+      <Dropdown
+        placeholder="Escolha uma unidade de saúde"
+        Icon={FaHospitalAlt}
+        onSelect={handleSelectOption}
+        options={ubs}
+        value={selectedUbs}
+      />
+      <QueuePageInfoContainer>{selectedUbs?.doctors} medicos</QueuePageInfoContainer>
+      <QueuePageInfoContainer>
+        Hora estimada de atendimento: {selectedUbs?.early_t} - {selectedUbs?.late_t}
+      </QueuePageInfoContainer>
+      <QueuePageButtonsContainer>
+        <Button primary={false} size="large" onClick={handleEnterQueue}>
+          Entra na Fila
+        </Button>
+      </QueuePageButtonsContainer>
+    </QueuePageSection>
+  );
+}
+
+export default NotOnQueue;

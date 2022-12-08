@@ -1,0 +1,22 @@
+// Vitest Snapshot v1
+
+exports[`TextInput > should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ itlDIl"
+  >
+    <div
+      class="sc-dkzDqf bMJUCZ"
+    >
+      <input
+        class="sc-hKMtZM fIniom"
+        data-testid="test-input"
+        placeholder="any_placeholder"
+        role="textbox"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
