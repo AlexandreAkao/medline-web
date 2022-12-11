@@ -19,7 +19,8 @@
     "coverage": "vitest run --coverage --globals",
     "storybook": "start-storybook -p 6006",
     "storybook:no-cache": "start-storybook --no-manager-cache -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -66,6 +67,7 @@
     "@vitest/coverage-c8": "^0.23.4",
     "@vitest/ui": "^0.23.4",
     "babel-loader": "^8.2.4",
+    "cypress": "^12.0.2",
     "eslint": "^8.12.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
