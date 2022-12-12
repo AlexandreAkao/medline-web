@@ -45,9 +45,6 @@ api.interceptors.response.use(
           const { access_token: accessToken } = data.data;
 
           localStorage.setItem('token', accessToken);
-        })
-        .catch((errorToken: AxiosError) => {
-          toast.error(errorToken.message, { autoClose: 3000, theme: 'colored' });
         });
     } else if (error.response && error.response.status >= 500) {
       toast.error(error.message, { autoClose: 3000, theme: 'colored' });
